@@ -1,0 +1,24 @@
+//
+//  ZYYMianshiDemo.pch
+//  ZYYMianshiDemo
+//
+//  Created by 郑尧元 on 2017/12/29.
+//  Copyright © 2017年 郑尧元. All rights reserved.
+//
+
+#import <Availability.h>
+
+#define __IPHONE__
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIViewController+dealloc.h"
+
+#ifdef DEBUG
+#define DEBUG_NSLog NSLog
+#else
+#define DEBUG_NSLog
+#endif
+
+#endif

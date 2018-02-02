@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>复杂计算放在后台线程</string>
+		<key>vc</key>
+		<string>ZYYCalculateInBgVC</string>
+		<key>eventId</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>masonry 测试</string>
+		<key>vc</key>
+		<string>ZYYMasonryVC</string>
+		<key>eventId</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>UIControl 埋点</string>
+		<key>vc</key>
+		<string>ZYYControlVC</string>
+		<key>eventId</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Runloop 实验</string>
+		<key>vc</key>
+		<string>ZYYRunloopObserverVC</string>
+		<key>eventId</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>方法混淆 实验</string>
+		<key>vc</key>
+		<string>ZYYSwizzlingVC</string>
+		<key>eventId</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>AutoReleasePool 引用计数观察</string>
+		<key>vc</key>
+		<string>ZYYAutoReleasePoolVC</string>
+		<key>eventId</key>
+		<string>6</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>重写 description 方法</string>
+		<key>vc</key>
+		<string>ZYYDebugVC</string>
+		<key>eventId</key>
+		<string>7</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>保证线程安全</string>
+		<key>vc</key>
+		<string>ZYYThreadSafetyVC</string>
+		<key>eventId</key>
+		<string>8</string>
+	</dict>
+</array>
+</plist>
