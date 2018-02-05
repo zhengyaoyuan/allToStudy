@@ -66,5 +66,13 @@
 		<key>eventId</key>
 		<string>8</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>UIView 生命周期探究</string>
+		<key>vc</key>
+		<string>ZYYViewLifeCycleVC</string>
+		<key>eventId</key>
+		<string>9</string>
+	</dict>
 </array>
 </plist>

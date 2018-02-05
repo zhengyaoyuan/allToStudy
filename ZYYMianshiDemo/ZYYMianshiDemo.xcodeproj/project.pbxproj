@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531077CD2028730C00A9E76B /* ZYYViewLifeCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 531077CC2028730C00A9E76B /* ZYYViewLifeCycleVC.m */; };
+		531077D02028736000A9E76B /* ZYYLifeCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 531077CF2028736000A9E76B /* ZYYLifeCycleView.m */; };
 		532E55952007636800C372D0 /* ZYYAutoReleasePoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E55942007636800C372D0 /* ZYYAutoReleasePoolVC.m */; };
 		532E559C2008644300C372D0 /* ZYYDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E559B2008644300C372D0 /* ZYYDog.m */; };
 		532E559F2008648200C372D0 /* ZYYDebugVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 532E559E2008648200C372D0 /* ZYYDebugVC.m */; };
@@ -51,6 +53,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		531077CB2028730C00A9E76B /* ZYYViewLifeCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYViewLifeCycleVC.h; sourceTree = "<group>"; };
+		531077CC2028730C00A9E76B /* ZYYViewLifeCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYViewLifeCycleVC.m; sourceTree = "<group>"; };
+		531077CE2028736000A9E76B /* ZYYLifeCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYLifeCycleView.h; sourceTree = "<group>"; };
+		531077CF2028736000A9E76B /* ZYYLifeCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYLifeCycleView.m; sourceTree = "<group>"; };
 		532E55932007636800C372D0 /* ZYYAutoReleasePoolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYAutoReleasePoolVC.h; sourceTree = "<group>"; };
 		532E55942007636800C372D0 /* ZYYAutoReleasePoolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYAutoReleasePoolVC.m; sourceTree = "<group>"; };
 		532E559A2008644300C372D0 /* ZYYDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYDog.h; sourceTree = "<group>"; };
@@ -144,6 +150,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		531077CA202872F500A9E76B /* ViewLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				531077CB2028730C00A9E76B /* ZYYViewLifeCycleVC.h */,
+				531077CC2028730C00A9E76B /* ZYYViewLifeCycleVC.m */,
+				531077CE2028736000A9E76B /* ZYYLifeCycleView.h */,
+				531077CF2028736000A9E76B /* ZYYLifeCycleView.m */,
+			);
+			path = ViewLifeCycle;
+			sourceTree = "<group>";
+		};
 		532E55992008643700C372D0 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +232,7 @@
 		5331913E1FF643FA0092692A /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				531077CA202872F500A9E76B /* ViewLifeCycle */,
 				533191531FF644500092692A /* demos.plist */,
 				533191461FF6442A0092692A /* ZYYCalculateInBgVC.h */,
 				5331913F1FF6442A0092692A /* ZYYCalculateInBgVC.m */,
@@ -375,6 +393,7 @@
 				532E55952007636800C372D0 /* ZYYAutoReleasePoolVC.m in Sources */,
 				5331911C1FF5FE450092692A /* MASConstraintMaker.m in Sources */,
 				5331911F1FF5FE450092692A /* View+MASAdditions.m in Sources */,
+				531077D02028736000A9E76B /* ZYYLifeCycleView.m in Sources */,
 				533191191FF5FE450092692A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5331914F1FF6442A0092692A /* ZYYControlVC.m in Sources */,
 				532E55A22008674200C372D0 /* ZYYBaseModel.m in Sources */,
@@ -403,6 +422,7 @@
 				533191301FF634780092692A /* UIViewController+userStastistics.m in Sources */,
 				532E55A52008676900C372D0 /* ZYYBaseModel+debug.m in Sources */,
 				533192151FFC4A630092692A /* ZYYSwizzlingBaseVC.m in Sources */,
+				531077CD2028730C00A9E76B /* ZYYViewLifeCycleVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
