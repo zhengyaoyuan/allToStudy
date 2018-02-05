@@ -40,6 +40,7 @@
 		533192111FFC43960092692A /* ZYYSwizzlingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5331920F1FFC43960092692A /* ZYYSwizzlingVC.m */; };
 		533192121FFC43960092692A /* ZYYSwizzlingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533192101FFC43960092692A /* ZYYSwizzlingVC.xib */; };
 		533192151FFC4A630092692A /* ZYYSwizzlingBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 533192141FFC4A630092692A /* ZYYSwizzlingBaseVC.m */; };
+		539A19362027ECF9003A7094 /* ZYYDeleteObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A19352027ECF9003A7094 /* ZYYDeleteObj.m */; };
 		53F1644A20088B40007C2822 /* ZYYThreadSafetyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F1644920088B40007C2822 /* ZYYThreadSafetyVC.m */; };
 		53F54A251FF146F0005EDA6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F54A241FF146F0005EDA6B /* AppDelegate.m */; };
 		53F54A281FF146F0005EDA6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F54A271FF146F0005EDA6B /* ViewController.m */; };
@@ -117,6 +118,8 @@
 		533192101FFC43960092692A /* ZYYSwizzlingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYYSwizzlingVC.xib; sourceTree = "<group>"; };
 		533192131FFC4A630092692A /* ZYYSwizzlingBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYSwizzlingBaseVC.h; sourceTree = "<group>"; };
 		533192141FFC4A630092692A /* ZYYSwizzlingBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYSwizzlingBaseVC.m; sourceTree = "<group>"; };
+		539A19342027ECF9003A7094 /* ZYYDeleteObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYDeleteObj.h; sourceTree = "<group>"; };
+		539A19352027ECF9003A7094 /* ZYYDeleteObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYDeleteObj.m; sourceTree = "<group>"; };
 		53F1644820088B40007C2822 /* ZYYThreadSafetyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYThreadSafetyVC.h; sourceTree = "<group>"; };
 		53F1644920088B40007C2822 /* ZYYThreadSafetyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYThreadSafetyVC.m; sourceTree = "<group>"; };
 		53F54A201FF146F0005EDA6B /* ZYYMianshiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYYMianshiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -276,6 +279,8 @@
 				53F54A291FF146F0005EDA6B /* Main.storyboard */,
 				53F54A391FF14829005EDA6B /* ZYYMianshiCell.h */,
 				53F54A3A1FF14829005EDA6B /* ZYYMianshiCell.m */,
+				539A19342027ECF9003A7094 /* ZYYDeleteObj.h */,
+				539A19352027ECF9003A7094 /* ZYYDeleteObj.m */,
 				53F54A2C1FF146F0005EDA6B /* Assets.xcassets */,
 				53F54A2E1FF146F0005EDA6B /* LaunchScreen.storyboard */,
 				53F54A311FF146F0005EDA6B /* Info.plist */,
@@ -375,6 +380,7 @@
 				532E55952007636800C372D0 /* ZYYAutoReleasePoolVC.m in Sources */,
 				5331911C1FF5FE450092692A /* MASConstraintMaker.m in Sources */,
 				5331911F1FF5FE450092692A /* View+MASAdditions.m in Sources */,
+				539A19362027ECF9003A7094 /* ZYYDeleteObj.m in Sources */,
 				533191191FF5FE450092692A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				5331914F1FF6442A0092692A /* ZYYControlVC.m in Sources */,
 				532E55A22008674200C372D0 /* ZYYBaseModel.m in Sources */,
