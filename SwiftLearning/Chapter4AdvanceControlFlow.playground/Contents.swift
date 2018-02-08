@@ -39,6 +39,27 @@ rowLoop: for row in 0..<8 {
     }
 }
 
-// Switch statements  case with many cases，could add where，could add tuples, could add range
+// Switch statements  1.case with many cases，2. could add where，3. could add tuples, 4. could add range
+// pattern matching
+switch sum {
+case let x where x % 2 == 0:
+    print("Even")
+case _ where sum == 2:
+    break
+default:
+    print("Odd")
+}
+// Partial matching  underscore means ignore
+let coordinates = (x: 3, y: 2, z: 5)
+switch coordinates {
+case (_, _, 5):
+    print("我是对的")
+case (let x, _, 0):
+    break
+default:
+    break
+}
+
+
 
 
