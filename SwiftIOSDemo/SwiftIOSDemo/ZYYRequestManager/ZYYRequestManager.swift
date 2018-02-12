@@ -32,7 +32,7 @@ class ZYYRequestManager: NSObject {
 //        // 单例模式，防止出现多个实例
 //    }
     
-    func requestWithURL(method: HTTPMethod = .get, url: String = ConstAPI.baseURL, parameter: [String: AnyObject]? = nil, success: @escaping (_ result: [String: AnyObject]) -> Void ,failure: @escaping (_ error: Error) -> Void) -> Void {
+    func requestWithURL(method: HTTPMethod = .get, url: String = ConstAPI.baseURL, parameter: [String: Any]? = nil, success: @escaping (_ result: [String: AnyObject]) -> Void ,failure: @escaping (_ error: Error) -> Void) -> Void {
         
         Alamofire.request(url, method: method, parameters: parameter, encoding: JSONEncoding.default).responseJSON { response in
 
@@ -75,7 +75,7 @@ extension ZYYRequestManager {
         if let parameter = modelToJson(param: param) {
             let parameterDic = ["parameter": parameter]
             // 看不懂？？
-            requestWithURL(parameter: parameterDic as [String : AnyObject], success: success, failure: failure)
+            requestWithURL(parameter: parameterDic, success: success, failure: failure)
         }
         
     }
