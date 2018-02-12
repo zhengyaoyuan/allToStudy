@@ -54,23 +54,29 @@ class ZYYRequestManager: NSObject {
 }
 
 extension ZYYRequestManager {
-//    func modelToJson(param: HTTPRequestParam) -> String? {
-//        let jsonData: Data
-//        do {
-//            try jsonData = ZYYRequestManager.jsonEncoder.encode(param)
-//        } catch <#pattern#> {
-//            <#statements#>
-//        }
-//
-//
-//        return String(data: jsonData, encoding: .utf8)
-//    }
+    func modelToJson(param: HTTPRequestParam) -> String? {
+        var jsonData: Data
+        do {
+            jsonData = try ZYYRequestManager.jsonEncoder.encode(param)
+            
+            return String(data: jsonData, encoding: .utf8)
+
+        } catch  {
+            print("Model to Json error")
+            
+            return nil
+        }
+
+    }
     
     func getHomeBannerList(success: @escaping (_ result: [String: AnyObject]) -> Void ,failure: @escaping (_ error: Error) -> Void) -> Void {
         let param = HTTPRequestHomeBannerListParam(userId: 2090278)
         
-        
-//            requestWithURL(parameter: nil, success: success, failure: failure)
+        if let parameter = modelToJson(param: param) {
+            let parameterDic = ["parameter": parameter]
+            // 看不懂？？
+            requestWithURL(parameter: parameterDic as [String : AnyObject], success: success, failure: failure)
+        }
         
     }
 }
