@@ -37,12 +37,14 @@ class ZYYRequestManager: NSObject {
         Alamofire.request(url, method: method, parameters: parameter, encoding: JSONEncoding.default).responseJSON { response in
 
             if response.error != nil {
+                print("请求失败")
                 failure(response.error!)
                 return;
             }
 
 
             if let JSON = response.result.value {
+                print("请求失败")
                 success(JSON as! [String: AnyObject])
             }
 
@@ -69,7 +71,7 @@ extension ZYYRequestManager {
 
     }
     
-    func getHomeBannerList(success: @escaping (_ result: [String: AnyObject]) -> Void ,failure: @escaping (_ error: Error) -> Void) -> Void {
+    func requestHomeBannerList(success: @escaping (_ result: [String: AnyObject]) -> Void ,failure: @escaping (_ error: Error) -> Void) -> Void {
         let param = HTTPRequestHomeBannerListParam(userId: 2090278)
         
         if let parameter = modelToJson(param: param) {

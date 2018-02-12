@@ -14,7 +14,12 @@ class ZYYRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        ZYYRequestManager.shared.
+        ZYYRequestManager.shared.requestHomeBannerList(
+            success: { result in
+    
+        }, failure: { error in
+            
+        })
         // Do any additional setup after loading the view.
     }
 
