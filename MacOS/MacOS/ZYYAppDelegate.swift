@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  ZYYAppDelegate.swift
 //  MacOS
 //
 //  Created by 郑尧元 on 2018/2/11.
@@ -9,9 +9,7 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-
+class ZYYAppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
