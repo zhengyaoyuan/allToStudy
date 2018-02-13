@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5376166420328752008D6CB4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376166320328752008D6CB4 /* ApiManager.swift */; };
 		53832A4320316444004D7A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A4220316444004D7A53 /* AppDelegate.swift */; };
 		53832A4820316444004D7A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53832A4620316444004D7A53 /* Main.storyboard */; };
 		53832A4A20316444004D7A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53832A4920316444004D7A53 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5376166320328752008D6CB4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		53832A3F20316444004D7A53 /* SwiftIOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53832A4220316444004D7A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53832A4720316444004D7A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				53832A7E203189EF004D7A53 /* HTTPRequestParam.swift */,
 				53832A7920316B88004D7A53 /* ZYYRequestManager.swift */,
+				5376166320328752008D6CB4 /* ApiManager.swift */,
 			);
 			path = ZYYRequestManager;
 			sourceTree = "<group>";
@@ -310,10 +313,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,6 +370,7 @@
 				53832A7320316515004D7A53 /* ZYYMeViewController.swift in Sources */,
 				53832A7F203189EF004D7A53 /* HTTPRequestParam.swift in Sources */,
 				53832A772031698E004D7A53 /* ZYYRequestViewController.swift in Sources */,
+				5376166420328752008D6CB4 /* ApiManager.swift in Sources */,
 				53832A7A20316B88004D7A53 /* ZYYRequestManager.swift in Sources */,
 				53832A4320316444004D7A53 /* AppDelegate.swift in Sources */,
 				53832A75203167AB004D7A53 /* ZYYHomeTableViewController.swift in Sources */,
@@ -533,7 +541,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 492W5NPSAE;
 				INFOPLIST_FILE = SwiftIOSDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.SwiftIOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -548,7 +558,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 492W5NPSAE;
 				INFOPLIST_FILE = SwiftIOSDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.SwiftIOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

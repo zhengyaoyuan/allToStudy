@@ -138,7 +138,7 @@
         <!--网络请求和模型-->
         <scene sceneID="Lhp-lE-Oe1">
             <objects>
-                <viewController title="网络请求和模型" id="Vy3-4b-kdu" customClass="ZYYRequestViewController" customModule="SwiftIOSDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="网络请求和模型" hidesBottomBarWhenPushed="YES" id="Vy3-4b-kdu" customClass="ZYYRequestViewController" customModule="SwiftIOSDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRC-8h-8YI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

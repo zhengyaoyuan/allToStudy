@@ -3,5 +3,6 @@ use_frameworks!
 
 target 'SwiftIOSDemo' do
 pod 'Alamofire'
+pod 'Moya', '~> 11.0.0'
 end
 
