@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A496EEF0EED4B793A9484F4 /* Pods_MacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB0E119ED6EABBE924516C8 /* Pods_MacOS.framework */; };
 		53832A292031279F004D7A53 /* ZYYAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A282031279F004D7A53 /* ZYYAppDelegate.swift */; };
 		53832A2B20312815004D7A53 /* ZYYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A2A20312815004D7A53 /* ZYYHomeViewController.swift */; };
 		53BB5CB620307D8E00AA512F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53BB5CB520307D8E00AA512F /* Assets.xcassets */; };
@@ -34,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EB0E119ED6EABBE924516C8 /* Pods_MacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD25CFCF1010C65C739DDB /* Pods-MacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacOS/Pods-MacOS.debug.xcconfig"; sourceTree = "<group>"; };
 		53832A282031279F004D7A53 /* ZYYAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYYAppDelegate.swift; sourceTree = "<group>"; };
 		53832A2A20312815004D7A53 /* ZYYHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYHomeViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A496EEF0EED4B793A9484F4 /* Pods_MacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +139,6 @@
 		CAD4701FC316EBBA61D90BA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0EB0E119ED6EABBE924516C8 /* Pods_MacOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

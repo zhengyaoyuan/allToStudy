@@ -12,18 +12,16 @@ class ZYYHomeViewController: NSViewController {
 
     var sessionCode: NSApplication.ModalSession?
     
-    
-    @IBOutlet weak var titleLabel: NSTextField!
+//    @IBOutlet weak var titleLabel: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         
-        titleLabel.textColor = NSColor.blue
     }
     
     
-    @IBAction func pushModalWindow(_ sender: Any) {
+    @IBAction func showModalWindow(_ sender: Any) {
         NSApplication.shared.runModal(for: NSWindow())
     }
     
