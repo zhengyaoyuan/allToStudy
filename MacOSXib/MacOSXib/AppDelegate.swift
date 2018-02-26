@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func showSessionWindow(_ sender: Any) {
-        NSApplication.shared.beginModalSession(for: self.modalWindow)
+        sessionCode = NSApplication.shared.beginModalSession(for: self.modalWindow)
     }
     
     @objc func windowClose(_ aNotification: Notification) {
