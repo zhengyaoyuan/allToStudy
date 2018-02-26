@@ -9,9 +9,6 @@
 import UIKit
 import Moya
 
-
-
-
 class ZYYRequestViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -28,11 +25,16 @@ class ZYYRequestViewController: UIViewController {
     
     
     func moyaRequest() {
-        ApiManagerProvider.request(.getActivityList(isTop: 1)) { (result) -> () in
-//            case let .success(response):
-//            break
-//            case let .failure(error):
-//            break
+        ApiManagerProvider.request(.getActivityList(isTop: 1)) { result in
+            switch result  {
+            case let .success(moyaResponse):
+//                let data = moyaResponse.data // Data, your JSON response is probably in here!
+                
+                let data = try? moyaResponse.mapJSON()
+                let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
+            case let .failure(error):
+                break
+            }
         }
         
     }

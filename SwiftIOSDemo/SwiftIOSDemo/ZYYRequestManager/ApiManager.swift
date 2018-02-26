@@ -17,6 +17,34 @@ extension Dictionary {
             self.updateValue(value, forKey:key)
         }
     }
+    
+    
+    func convertToJson() -> String? {
+        
+        if let data = try? JSONSerialization.data(withJSONObject: self, options: JSONSerialization.WritingOptions.init(rawValue: 0)),
+           let JSONString = String(data: data, encoding: String.Encoding.utf8) {
+            return JSONString
+        } else {
+            return nil
+        }
+    }
+    
+//    func convertToJson() -> String? {
+//        do {
+//            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+//            // here "jsonData" is the dictionary encoded in JSON data
+//
+//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+//            // here "decoded" is of type `Any`, decoded from JSON data
+//
+//            // you can now cast it with the right type
+//            if let dictFromJSON = decoded as? [String:String] {
+//                // use dictFromJSON
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
 }
 
 enum ApiManager {
@@ -24,13 +52,6 @@ enum ApiManager {
     case getActivityList(isTop: Int)
 //    case getDantangList(String)
 //    case getNewsList
-//    case getMoreNews(String)
-//    case getThemeList
-//    case getThemeDesc(Int)
-//    case getNewsDesc(Int)
-//    case Create(title: String, body: String, userId: Int)
-//    case Login(phone:String,password:String)
-//    case Banner(String)
 }
 
 extension ApiManager: TargetType {
@@ -64,21 +85,6 @@ extension ApiManager: TargetType {
 //            return "v1/channels/\(page)/items"
 //        case .getNewsList:
 //            return "4/news/latest"
-//        case .getMoreNews(let date):
-//            return "4/news/before/" + date
-//        case .getThemeList:
-//            return "4/themes"
-//        case .getThemeDesc(let id):
-//            return "4/theme/\(id)"
-//        case .getNewsDesc(let id):
-//            return "4/news/\(id)"
-//        case .Create(_, _, _):
-//            return "posts"
-//        case .Login:
-//            return "/rest/user/certificate"
-//        case .Banner:
-//            return "v1/banners"
-//
 //        }
     }
     
@@ -88,10 +94,8 @@ extension ApiManager: TargetType {
         switch self {
         
         default:
-//            return .get
-            return .post
+            return .get
         }
-        
         
 //        switch self {
 //            
@@ -103,57 +107,6 @@ extension ApiManager: TargetType {
 //            return .get
 //        }
         
-    }
-    
-    
-    
-    /// The parameters to be incoded in the request.
-    var parameters: [String: Any]? {
-        
-        
-        
-        var dic = ["platform": 3, "a": 0, "c": Bundle.main.infoDictionary!["StoreID"]!]
-        
-        
-        switch self {
-        case .getHomeColumnList(let moduleId):
-            let individialDic = ["moduleId": moduleId]
-            
-            dic.update(other: individialDic)
-            
-            return dic
-        
-//        default:
-//            return nil
-        case .getActivityList(let isTop):
-            let individialDic = ["isTop": isTop]
-            dic.update(other: individialDic)
-            
-            let finalDic = ["parameter": dic]
-            
-            return finalDic
-
-        }
-        
-        
-//        switch self {
-//        case .Create(let title, let body, let userId):
-//            return ["title": title, "body": body, "userId": userId]
-//
-//        case .Login(let number, let passwords):
-//            return ["mobile" : number, "password" :  passwords,"deviceId": "12121312323"]
-//        case .Banner(let strin):
-//            return ["channel" :strin]
-//
-//        default:
-//            return nil
-//
-//        }
-    }
-    
-    /// The method used for parameter encoding.
-    var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
     }
     
     /// Provides stub data for use in testing.
@@ -181,16 +134,14 @@ extension ApiManager: TargetType {
             return .requestParameters(parameters: dic, encoding: URLEncoding.queryString)
         case .getActivityList(let isTop):
             
-            let dic = ["platform": 3, "a": 0, "c": 255, "isTop": isTop, "FuncTag": "80010004", "userId": 0] as [String : Any]
+            dic.update(other: ["FuncTag": "80010004", "isTop": isTop])
             
-            let data : NSData! = try? JSONSerialization.data(withJSONObject: dic, options: []) as NSData!
-            let JSONString = NSString(data:data as Data,encoding: String.Encoding.utf8.rawValue)
-
-            let finalDic = ["parameter": JSONString!]
-            
-            return .requestParameters(parameters: finalDic, encoding: URLEncoding.queryString)
-//        default:
-//            .requestPlain
+            if let jsonString = dic.convertToJson() {
+                let finalDic = ["parameter": jsonString]
+                return .requestParameters(parameters: finalDic, encoding: URLEncoding.queryString)
+            } else {
+                return .requestPlain
+            }
         }
     }
     
