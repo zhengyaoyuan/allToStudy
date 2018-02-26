@@ -28,30 +28,11 @@ extension Dictionary {
             return nil
         }
     }
-    
-//    func convertToJson() -> String? {
-//        do {
-//            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
-//            // here "jsonData" is the dictionary encoded in JSON data
-//
-//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-//            // here "decoded" is of type `Any`, decoded from JSON data
-//
-//            // you can now cast it with the right type
-//            if let dictFromJSON = decoded as? [String:String] {
-//                // use dictFromJSON
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
 }
 
 enum ApiManager {
     case getHomeColumnList(moduleId: Int)
     case getActivityList(isTop: Int)
-//    case getDantangList(String)
-//    case getNewsList
 }
 
 extension ApiManager: TargetType {
@@ -64,16 +45,6 @@ extension ApiManager: TargetType {
     var baseURL: URL {
         
         return URL.init(string: "http://api.bangzb.com/")!
-//        switch self {
-//        case .Create(_,_,_):
-//            return URL.init(string: "http://jsonplaceholder.typicode.com/")!
-//        case .getDantangList,.Banner:
-//            return URL.init(string: "http://api.dantangapp.com/")!
-//        case .Login:
-//            return URL.init(string: "https://api.grtstar.cn")!
-//        default:
-//            return URL.init(string: "http://news-at.zhihu.com/api/")!
-//        }
     }
     
     /// The path to be appended to `baseURL` to form the full `URL`.
@@ -83,8 +54,6 @@ extension ApiManager: TargetType {
 //        switch self {
 //        case .getDantangList(let page):
 //            return "v1/channels/\(page)/items"
-//        case .getNewsList:
-//            return "4/news/latest"
 //        }
     }
     

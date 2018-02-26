@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		531798032043E69D006BAFD6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531798022043E69D006BAFD6 /* R.generated.swift */; };
 		5376166420328752008D6CB4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376166320328752008D6CB4 /* ApiManager.swift */; };
 		53832A4320316444004D7A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A4220316444004D7A53 /* AppDelegate.swift */; };
 		53832A4820316444004D7A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53832A4620316444004D7A53 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		531798022043E69D006BAFD6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		5376166320328752008D6CB4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		53832A3F20316444004D7A53 /* SwiftIOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53832A4220316444004D7A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		53832A4120316444004D7A53 /* SwiftIOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				531798022043E69D006BAFD6 /* R.generated.swift */,
 				53832A7820316A04004D7A53 /* ZYYRequestManager */,
 				53832A4220316444004D7A53 /* AppDelegate.swift */,
 				53832A74203167AB004D7A53 /* ZYYHomeTableViewController.swift */,
@@ -174,6 +177,7 @@
 			buildConfigurationList = 53832A6720316444004D7A53 /* Build configuration list for PBXNativeTarget "SwiftIOSDemo" */;
 			buildPhases = (
 				7656A090504051CCBF6C39AF /* [CP] Check Pods Manifest.lock */,
+				531798012043E52D006BAFD6 /* ShellScript */,
 				53832A3B20316444004D7A53 /* Sources */,
 				53832A3C20316444004D7A53 /* Frameworks */,
 				53832A3D20316444004D7A53 /* Resources */,
@@ -307,19 +311,40 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		531798012043E52D006BAFD6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		7656A090504051CCBF6C39AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -366,6 +391,7 @@
 				5376166420328752008D6CB4 /* ApiManager.swift in Sources */,
 				53832A4320316444004D7A53 /* AppDelegate.swift in Sources */,
 				53832A75203167AB004D7A53 /* ZYYHomeTableViewController.swift in Sources */,
+				531798032043E69D006BAFD6 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
