@@ -12,6 +12,9 @@
 		531798162043F79E006BAFD6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 531798142043F79E006BAFD6 /* MainMenu.xib */; };
 		531798222043F79E006BAFD6 /* MacOSXibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531798212043F79E006BAFD6 /* MacOSXibTests.swift */; };
 		5317982D2043F79E006BAFD6 /* MacOSXibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5317982C2043F79E006BAFD6 /* MacOSXibUITests.swift */; };
+		538955CE2044ED8A0060B797 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 538955CD2044ED8A0060B797 /* AppIcon.png */; };
+		538955D02044FA200060B797 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538955CF2044FA200060B797 /* CustomView.swift */; };
+		538955D2204506E40060B797 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 538955D1204506E40060B797 /* screen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		531798282043F79E006BAFD6 /* MacOSXibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacOSXibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5317982C2043F79E006BAFD6 /* MacOSXibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSXibUITests.swift; sourceTree = "<group>"; };
 		5317982E2043F79E006BAFD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538955CD2044ED8A0060B797 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		538955CF2044FA200060B797 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		538955D1204506E40060B797 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				531798102043F79E006BAFD6 /* AppDelegate.swift */,
+				538955CF2044FA200060B797 /* CustomView.swift */,
+				538955CD2044ED8A0060B797 /* AppIcon.png */,
+				538955D1204506E40060B797 /* screen.png */,
 				531798122043F79E006BAFD6 /* Assets.xcassets */,
 				531798142043F79E006BAFD6 /* MainMenu.xib */,
 				531798172043F79E006BAFD6 /* Info.plist */,
@@ -229,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				531798132043F79E006BAFD6 /* Assets.xcassets in Resources */,
+				538955D2204506E40060B797 /* screen.png in Resources */,
 				531798162043F79E006BAFD6 /* MainMenu.xib in Resources */,
+				538955CE2044ED8A0060B797 /* AppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				531798112043F79E006BAFD6 /* AppDelegate.swift in Sources */,
+				538955D02044FA200060B797 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
