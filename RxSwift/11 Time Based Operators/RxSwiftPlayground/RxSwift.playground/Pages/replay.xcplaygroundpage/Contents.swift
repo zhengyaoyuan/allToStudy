@@ -3,7 +3,23 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+let elementsPerSecond = 1
+let maxElements = 5
+let replayedElements = 1
+let replayDelay: TimeInterval = 3
 
+let sourceObservable = Observable<Int>.create {
+    var value = 1
+    let timer = DispatchSource.timer(interval: 1.0 /
+        Double(elementsPerSecond), queue: .main) {
+            if value <= maxElements {
+                observer.onNext(value)
+                
+            }
+    }
+    
+    
+}
 
 // Support code -- DO NOT REMOVE
 class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConvertible {
@@ -22,10 +38,7 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
   }
 }
 
-let elementsPerSecond = 1
-let maxElements = 5
-let replayedElements = 1
-let replayDelay: TimeInterval = 3
+
 /*:
  Copyright (c) 2014-2016 Razeware LLC
  

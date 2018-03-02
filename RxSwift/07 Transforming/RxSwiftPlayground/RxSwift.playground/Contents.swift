@@ -17,6 +17,10 @@ struct Student {
     
 }
 
+struct Player {
+    var score: Variable<Int>        //里面是一个Variable
+}
+
 example(of: "flatMap") {
     let disposeBag = DisposeBag()
     // 1
@@ -34,10 +38,9 @@ example(of: "flatMap") {
             print($0)
         })
         .disposed(by: disposeBag)
-    
+
     ryan.score.value = 85
-    student.onNext(ryan)
-    
+    student.onNext(ryan)    
 }
 
 example(of: "flatMapLatest") {

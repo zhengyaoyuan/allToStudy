@@ -61,6 +61,10 @@ example(of: "merge") {
     disposable.dispose()
 }
 
+example(of: "combineLatest") {
+    
+}
+
 example(of: "combine user choice and value") {
     let choice : Observable<DateFormatter.Style> =
         Observable.of(.short, .long)
@@ -125,6 +129,27 @@ example(of: "scan") {
     observable.subscribe(onNext: { value in
         print(value)
     })
+}
+
+example(of: "shareReplay") {
+    let bag = DisposeBag()
+    
+    // 订阅一次， map 就执行一次
+    let testReplay = Observable.just("😂")
+        .map {  print($0) }
+        .shareReplay(1)
+    
+    testReplay
+        .subscribe { event in
+            print(event)
+        }
+        .disposed(by: bag)
+    
+    testReplay
+        .subscribe { event in
+            print(event)
+        }
+        .disposed(by: bag)
 }
 /*:
  Copyright (c) 2014-2016 Razeware LLC
