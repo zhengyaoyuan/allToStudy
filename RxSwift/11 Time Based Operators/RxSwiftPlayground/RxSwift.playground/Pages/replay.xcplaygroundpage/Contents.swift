@@ -14,11 +14,8 @@ let sourceObservable = Observable<Int>.create {
         Double(elementsPerSecond), queue: .main) {
             if value <= maxElements {
                 observer.onNext(value)
-                
             }
     }
-    
-    
 }
 
 // Support code -- DO NOT REMOVE

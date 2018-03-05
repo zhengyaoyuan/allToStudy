@@ -64,6 +64,7 @@ class EONET {
                 guard let finalURL = components.url else {
                     throw EOError.invalidURL(endpoint)
                 }
+                
                 let request = URLRequest(url: finalURL)
                 return URLSession.shared.rx.response(request: request)
                     .map { _, data -> [String: Any] in

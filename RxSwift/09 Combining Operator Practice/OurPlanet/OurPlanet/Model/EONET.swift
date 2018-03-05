@@ -109,7 +109,7 @@ class EONET {
         let openEvents = events(forLast: days, closed: false, endpoint: category.endpoint)
         let closedEvents = events(forLast: days, closed: true, endpoint:category.endpoint)
         
-        // concat
+        // concat  two request
 //        return openEvents.concat(closedEvents)
         
         return Observable.of(openEvents, closedEvents)
