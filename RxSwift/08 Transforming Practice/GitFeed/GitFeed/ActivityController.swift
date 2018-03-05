@@ -25,6 +25,13 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+func cachedFileURL(_ fileName: String) -> URL {
+    return FileManager.default
+        .urls(for: .cachesDirectory, in: .allDomainsMask)
+        .first!
+        .appendingPathComponent(fileName)
+}
+
 class ActivityController: UITableViewController {
     
     let repo = "ReactiveX/RxSwift"
@@ -32,7 +39,8 @@ class ActivityController: UITableViewController {
     fileprivate let events = Variable<[Event]>([])
     fileprivate let bag = DisposeBag()
     
-//    private let eventsFileURL = cachedFileURL("events.plist")
+    private let eventsFileURL = cachedFileURL("events.plist")
+    private let modifiedFileURL = cachedFileURL("modified.txt")
     
     fileprivate let lastModified = Variable<NSString?>(nil)
     
@@ -48,23 +56,31 @@ class ActivityController: UITableViewController {
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
-        let eventsArray = (NSArray(contentsOf: cachedFileURL("events.plist"))
+        let eventsArray = (NSArray(contentsOf: eventsFileURL)
             as? [[String: Any]]) ?? []
         events.value = eventsArray.flatMap(Event.init)
         
-        lastModified.value = try? NSString(contentsOf: cachedFileURL("modified.txt"),
+        lastModified.value = try? NSString(contentsOf: modifiedFileURL,
                                            usedEncoding: nil)
         
         refresh()
     }
     
     func refresh() {
-        fetchEvents(repo: repo)
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.fetchEvents(repo: strongSelf.repo)
+        }
     }
     
     func fetchEvents(repo: String) {
+        
+//        let response = Observable.from(["https://api.github.com/search/repositories?q=language:swift&per_page=5"])
+
+        
+        
         let response = Observable.from([repo])
-//        String to URL
+            // String to URL
             .map { urlString -> URL in
                 return URL(string: "https://api.github.com/repos/\(urlString)/events")!
             }
@@ -78,17 +94,16 @@ class ActivityController: UITableViewController {
                 }
                 return request
             })
-            //            .map { (url) -> URLRequest in
-            //                return URLRequest(url: url)
-            //            }
-            // Request
+
             .flatMap { (request) -> Observable<(HTTPURLResponse, Data)> in
+                print("main: \(Thread.isMainThread)")
                 return URLSession.shared.rx.response(request: request)
             }
             .shareReplay(1)
         response
             // filter
             .filter { response, _ -> Bool in
+                print("main: \(Thread.isMainThread)")
                 return 200 ..< 300 ~= response.statusCode
             }
             // Json to [String:xx]
@@ -98,7 +113,7 @@ class ActivityController: UITableViewController {
                 }
                 return result
             }
-            
+
             .filter { (objects) -> Bool in
                 return objects.count > 0
             }
@@ -111,7 +126,7 @@ class ActivityController: UITableViewController {
                 self?.processEvents(newEvents)
             })
             .disposed(by: bag)
-        
+
         response
             .filter {response, _ in
                 return 200..<400 ~= response.statusCode
@@ -126,7 +141,7 @@ class ActivityController: UITableViewController {
             .subscribe(onNext: { [weak self] modifiedHeader in
                 guard let strongSelf = self else { return }
                 strongSelf.lastModified.value = modifiedHeader
-                try? modifiedHeader.write(to: strongSelf.cachedFileURL("modified.txt"), atomically:
+                try? modifiedHeader.write(to: strongSelf.modifiedFileURL, atomically:
                     true,
                                           encoding: String.Encoding.utf8.rawValue)
         })
@@ -136,6 +151,8 @@ class ActivityController: UITableViewController {
     
     
     func processEvents(_ newEvents: [Event]) {
+        print("main: \(Thread.isMainThread)")
+
         var updatedEvents = newEvents + events.value
         
         if updatedEvents.count > 50 {
@@ -169,10 +186,5 @@ class ActivityController: UITableViewController {
     }
     
     
-    func cachedFileURL(_ fileName: String) -> URL {
-        return FileManager.default
-            .urls(for: .cachesDirectory, in: .allDomainsMask)
-            .first!
-            .appendingPathComponent(fileName)
-    }
+    
 }

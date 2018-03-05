@@ -71,6 +71,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         
         // why concat
         eoCategories
+            // 只是为了重新刷新，并没有改变 eoCategories
             .concat(updatedCategories)
             .bind(to: categories)
             .disposed(by: disposeBag)
