@@ -12,6 +12,18 @@ example(of: "toArray") {
         .disposed(by: disposeBag)
 }
 
+
+//example(of: "flatMap ZYY") {
+//    let disposeBag = DisposeBag()
+//
+//    let test = Observable.of(1, 2, 3, 4)
+//        .flatMap {
+//
+//        }
+//
+//
+//}
+
 struct Student {
     var score: Variable<Int>
     
@@ -37,6 +49,11 @@ example(of: "flatMap") {
     
     ryan.score.value = 85
     student.onNext(ryan)
+    ryan.score.value = 95
+    
+    student.onNext(charlotte)
+    student.onNext(ryan)
+    ryan.score.value = 100
     
 }
 
