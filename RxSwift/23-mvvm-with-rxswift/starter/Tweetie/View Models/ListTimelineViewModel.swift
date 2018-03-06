@@ -28,28 +28,59 @@ import RxRealm
 import RxCocoa
 
 class ListTimelineViewModel {
-  private let bag = DisposeBag()
-  private let fetcher: TimelineFetcher
-
-  // MARK: - Input
-
-  // MARK: - Output
-
-  // MARK: - Init
-  init(account: Driver<TwitterAccount.AccountStatus>,
-       list: ListIdentifier,
-       apiType: TwitterAPIProtocol.Type = TwitterAPI.self) {
-
-
-    // fetch and store tweets
-    fetcher = TimelineFetcher(account: account, list: list, apiType: apiType)
-
-    bindOutput()
-  }
-
-  // MARK: - Methods
-  private func bindOutput() {
-    //bind tweets
-    //bind if an account is available
-  }
+    private let bag = DisposeBag()
+    private let fetcher: TimelineFetcher
+    
+    let list: ListIdentifier
+    let account: Driver<TwitterAccount.AccountStatus>
+    
+    
+    // MARK: - Input
+    
+    // a proxy which sets the value of paused on the fetcher class
+    var paused: Bool = false {
+        didSet {
+            fetcher.paused.value = paused
+        }
+    }
+    
+    
+    // MARK: - Output
+    private(set) var tweets: Observable<(AnyRealmCollection<Tweet>,
+    RealmChangeset?)>!
+    private(set) var loggedIn: Driver<Bool>!
+    
+    // MARK: - Init
+    init(account: Driver<TwitterAccount.AccountStatus>,
+         list: ListIdentifier,
+         apiType: TwitterAPIProtocol.Type = TwitterAPI.self) {
+        self.account = account
+        self.list = list
+        
+        // fetch and store tweets
+        fetcher = TimelineFetcher(account: account, list: list, apiType: apiType)
+        fetcher.timeline
+            .subscribe(Realm.rx.add(update: true))
+            .addDisposableTo(bag)
+        
+        bindOutput()
+    }
+    
+    // MARK: - Methods
+    private func bindOutput() {
+        //bind tweets
+        //bind if an account is available
+        guard let realm = try? Realm() else {
+            return
+        }
+        tweets = Observable.changesetFrom(realm.objects(Tweet.self))
+        
+        loggedIn = account.map { status in
+            switch status {
+            case .unavailable: return false
+            case .authorized: return true
+            }
+            }
+            .asDriver(onErrorJustReturn: false)
+    }
 }
