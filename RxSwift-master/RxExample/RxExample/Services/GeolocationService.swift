@@ -23,6 +23,7 @@ class GeolocationService {
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         
+        // deferred 会为每一个订阅观察者，创建一个序列
         authorized = Observable.deferred { [weak locationManager] in
                 let status = CLLocationManager.authorizationStatus()
                 guard let locationManager = locationManager else {
@@ -32,6 +33,7 @@ class GeolocationService {
                     .rx.didChangeAuthorizationStatus
                     .startWith(status)
             }
+            // Observable to Driver
             .asDriver(onErrorJustReturn: CLAuthorizationStatus.notDetermined)
             .map {
                 switch $0 {

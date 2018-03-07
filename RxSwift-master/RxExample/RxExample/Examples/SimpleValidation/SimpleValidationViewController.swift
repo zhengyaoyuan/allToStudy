@@ -22,6 +22,10 @@ class SimpleValidationViewController : ViewController {
     @IBOutlet weak var passwordValidOutlet: UILabel!
 
     @IBOutlet weak var doSomethingOutlet: UIButton!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +63,8 @@ class SimpleValidationViewController : ViewController {
         doSomethingOutlet.rx.tap
             .subscribe(onNext: { [weak self] _ in self?.showAlert() })
             .disposed(by: disposeBag)
+        
+//        bindUI()
     }
 
     func showAlert() {
@@ -71,5 +77,45 @@ class SimpleValidationViewController : ViewController {
 
         alertView.show()
     }
-
+    
+    func bindUI() {
+        usernameValidOutlet.text = "Username has to be at least \(minimalUsernameLength) characters"
+        passwordValidOutlet.text = "Password has to be at least \(minimalPasswordLength) characters"
+        
+        //  Observable<Bool> 作为结果，可以绑定到 控件身上
+        let usernameValid = usernameOutlet.rx.text.orEmpty
+            .map { $0.count >= minimalUsernameLength }
+            .share(replay: 1)
+        
+        let passwordValid = passwordOutlet.rx.text.orEmpty
+            .map { $0.count >= minimalPasswordLength }
+            .share(replay: 1)
+        
+        let bothValid = Observable
+            .combineLatest(usernameValid, passwordValid) { $0 && $1 }
+            .share(replay: 1)
+        
+        usernameValid.asObservable()
+            .bind(to: usernameValidOutlet.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        usernameValid.asObservable()
+            .bind(to: passwordOutlet.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        passwordValid.asObservable()
+            .bind(to: passwordValidOutlet.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        bothValid.asObservable()
+            .bind(to: doSomethingOutlet.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        doSomethingOutlet.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.showAlert()
+                }
+            )
+            .disposed(by: disposeBag)
+    }
 }

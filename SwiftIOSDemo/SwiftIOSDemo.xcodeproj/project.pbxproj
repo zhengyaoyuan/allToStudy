@@ -18,6 +18,8 @@
 		53832A7320316515004D7A53 /* ZYYMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A7220316515004D7A53 /* ZYYMeViewController.swift */; };
 		53832A75203167AB004D7A53 /* ZYYHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A74203167AB004D7A53 /* ZYYHomeTableViewController.swift */; };
 		53832A772031698E004D7A53 /* ZYYRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A762031698E004D7A53 /* ZYYRequestViewController.swift */; };
+		538CF6F2204F89DE0096FA42 /* Numbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538CF6F0204F89DE0096FA42 /* Numbers.storyboard */; };
+		538CF6F3204F89DE0096FA42 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */; };
 		5ACA81F93BA1F5473BBBBF08 /* Pods_SwiftIOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A2FBF00926B743BB0EF01 /* Pods_SwiftIOSDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		53832A7220316515004D7A53 /* ZYYMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYMeViewController.swift; sourceTree = "<group>"; };
 		53832A74203167AB004D7A53 /* ZYYHomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYHomeTableViewController.swift; sourceTree = "<group>"; };
 		53832A762031698E004D7A53 /* ZYYRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYRequestViewController.swift; sourceTree = "<group>"; };
+		538CF6F0204F89DE0096FA42 /* Numbers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Numbers.storyboard; sourceTree = "<group>"; };
+		538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 		649F4C05B38E0D5394FCD706 /* Pods-SwiftIOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C28A2FBF00926B743BB0EF01 /* Pods_SwiftIOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F310A851F1B63AD48A15C3CD /* Pods-SwiftIOSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		53832A4120316444004D7A53 /* SwiftIOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				538CF6EA204F85FE0096FA42 /* ZYYRxDemo */,
 				531798022043E69D006BAFD6 /* R.generated.swift */,
 				53832A7820316A04004D7A53 /* ZYYRequestManager */,
 				53832A4220316444004D7A53 /* AppDelegate.swift */,
@@ -158,6 +163,23 @@
 				5376166320328752008D6CB4 /* ApiManager.swift */,
 			);
 			path = ZYYRequestManager;
+			sourceTree = "<group>";
+		};
+		538CF6EA204F85FE0096FA42 /* ZYYRxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				538CF6EF204F89DE0096FA42 /* Numbers */,
+			);
+			path = ZYYRxDemo;
+			sourceTree = "<group>";
+		};
+		538CF6EF204F89DE0096FA42 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				538CF6F0204F89DE0096FA42 /* Numbers.storyboard */,
+				538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */,
+			);
+			path = Numbers;
 			sourceTree = "<group>";
 		};
 		DAAF734A52B4888D02D992F8 /* Pods */ = {
@@ -281,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53832A4D20316444004D7A53 /* LaunchScreen.storyboard in Resources */,
+				538CF6F2204F89DE0096FA42 /* Numbers.storyboard in Resources */,
 				53832A4A20316444004D7A53 /* Assets.xcassets in Resources */,
 				53832A4820316444004D7A53 /* Main.storyboard in Resources */,
 			);
@@ -316,7 +339,11 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -326,7 +353,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,6 +421,7 @@
 				53832A772031698E004D7A53 /* ZYYRequestViewController.swift in Sources */,
 				5376166420328752008D6CB4 /* ApiManager.swift in Sources */,
 				53832A4320316444004D7A53 /* AppDelegate.swift in Sources */,
+				538CF6F3204F89DE0096FA42 /* NumbersViewController.swift in Sources */,
 				53832A75203167AB004D7A53 /* ZYYHomeTableViewController.swift in Sources */,
 				531798032043E69D006BAFD6 /* R.generated.swift in Sources */,
 			);

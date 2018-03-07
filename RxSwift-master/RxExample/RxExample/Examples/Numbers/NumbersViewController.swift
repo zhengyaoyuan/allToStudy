@@ -19,7 +19,8 @@ class NumbersViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // orEmpty String? to String
         Observable.combineLatest(number1.rx.text.orEmpty, number2.rx.text.orEmpty, number3.rx.text.orEmpty) { textValue1, textValue2, textValue3 -> Int in
                 return (Int(textValue1) ?? 0) + (Int(textValue2) ?? 0) + (Int(textValue3) ?? 0)
             }
