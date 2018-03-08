@@ -88,6 +88,7 @@ class ZYYRequestViewController: UIViewController {
                 if let data = try? moyaResponse.mapJSON() as! [String: Any], let list = Mapper<ZYYActivity>().mapArray(JSONObject: data["activityList"]){
                     
                     print(list)
+                    let model = list[0]
                 }
                 let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
                 print(statusCode)
