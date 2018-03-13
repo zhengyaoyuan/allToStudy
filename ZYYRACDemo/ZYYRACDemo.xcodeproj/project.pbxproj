@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5383543E2057595E000DBADA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383543D2057595E000DBADA /* AppDelegate.m */; };
+		538354412057595E000DBADA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 538354402057595E000DBADA /* ViewController.m */; };
+		538354442057595E000DBADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538354422057595E000DBADA /* Main.storyboard */; };
+		538354462057595E000DBADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 538354452057595E000DBADA /* Assets.xcassets */; };
+		538354492057595E000DBADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538354472057595E000DBADA /* LaunchScreen.storyboard */; };
+		5383544C2057595E000DBADA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383544B2057595E000DBADA /* main.m */; };
+		53835453205767B9000DBADA /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53835454205767B9000DBADA /* ReactiveObjC.framework */; };
+		5383545820576D9F000DBADA /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383545720576D9F000DBADA /* TwoViewController.m */; };
+		5383545B205781B5000DBADA /* ZYYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5383545A205781B5000DBADA /* ZYYView.m */; };
+		5383545D205781C6000DBADA /* ZYYView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5383545C205781C6000DBADA /* ZYYView.xib */; };
+		F045A165F46414EE5614CA5C /* Pods_ZYYRACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81BF8484CB18A534BF9727D /* Pods_ZYYRACDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		538354392057595E000DBADA /* ZYYRACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYYRACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5383543C2057595E000DBADA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5383543D2057595E000DBADA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5383543F2057595E000DBADA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		538354402057595E000DBADA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		538354432057595E000DBADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		538354452057595E000DBADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		538354482057595E000DBADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5383544A2057595E000DBADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5383544B2057595E000DBADA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53835454205767B9000DBADA /* ReactiveObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5383545620576D9F000DBADA /* TwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		5383545720576D9F000DBADA /* TwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		53835459205781B5000DBADA /* ZYYView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYYView.h; sourceTree = "<group>"; };
+		5383545A205781B5000DBADA /* ZYYView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYYView.m; sourceTree = "<group>"; };
+		5383545C205781C6000DBADA /* ZYYView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYYView.xib; sourceTree = "<group>"; };
+		CDB5C4A54E737864FD9E0413 /* Pods-ZYYRACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYYRACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYYRACDemo/Pods-ZYYRACDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D81BF8484CB18A534BF9727D /* Pods_ZYYRACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYYRACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8193F1929E943F51606ACE /* Pods-ZYYRACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYYRACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYYRACDemo/Pods-ZYYRACDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		538354362057595E000DBADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53835453205767B9000DBADA /* ReactiveObjC.framework in Frameworks */,
+				F045A165F46414EE5614CA5C /* Pods_ZYYRACDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03A758B0358231503A58E5E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDB5C4A54E737864FD9E0413 /* Pods-ZYYRACDemo.debug.xcconfig */,
+				FB8193F1929E943F51606ACE /* Pods-ZYYRACDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A90357F5B16A85DF6CA2882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53835454205767B9000DBADA /* ReactiveObjC.framework */,
+				D81BF8484CB18A534BF9727D /* Pods_ZYYRACDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		538354302057595E000DBADA = {
+			isa = PBXGroup;
+			children = (
+				5383543B2057595E000DBADA /* ZYYRACDemo */,
+				5383543A2057595E000DBADA /* Products */,
+				03A758B0358231503A58E5E4 /* Pods */,
+				4A90357F5B16A85DF6CA2882 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5383543A2057595E000DBADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				538354392057595E000DBADA /* ZYYRACDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5383543B2057595E000DBADA /* ZYYRACDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5383543C2057595E000DBADA /* AppDelegate.h */,
+				5383543D2057595E000DBADA /* AppDelegate.m */,
+				5383543F2057595E000DBADA /* ViewController.h */,
+				538354402057595E000DBADA /* ViewController.m */,
+				5383545620576D9F000DBADA /* TwoViewController.h */,
+				5383545720576D9F000DBADA /* TwoViewController.m */,
+				53835459205781B5000DBADA /* ZYYView.h */,
+				5383545A205781B5000DBADA /* ZYYView.m */,
+				5383545C205781C6000DBADA /* ZYYView.xib */,
+				538354422057595E000DBADA /* Main.storyboard */,
+				538354452057595E000DBADA /* Assets.xcassets */,
+				538354472057595E000DBADA /* LaunchScreen.storyboard */,
+				5383544A2057595E000DBADA /* Info.plist */,
+				5383544B2057595E000DBADA /* main.m */,
+			);
+			path = ZYYRACDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		538354382057595E000DBADA /* ZYYRACDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5383544F2057595E000DBADA /* Build configuration list for PBXNativeTarget "ZYYRACDemo" */;
+			buildPhases = (
+				6348CF623B3B1C81D803A4AD /* [CP] Check Pods Manifest.lock */,
+				538354352057595E000DBADA /* Sources */,
+				538354362057595E000DBADA /* Frameworks */,
+				538354372057595E000DBADA /* Resources */,
+				4A49AE6E924CACDE24E98003 /* [CP] Embed Pods Frameworks */,
+				BABF3B35961BDE0BE6E3A985 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYYRACDemo;
+			productName = ZYYRACDemo;
+			productReference = 538354392057595E000DBADA /* ZYYRACDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		538354312057595E000DBADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "郑尧元";
+				TargetAttributes = {
+					538354382057595E000DBADA = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 538354342057595E000DBADA /* Build configuration list for PBXProject "ZYYRACDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 538354302057595E000DBADA;
+			productRefGroup = 5383543A2057595E000DBADA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				538354382057595E000DBADA /* ZYYRACDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		538354372057595E000DBADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538354492057595E000DBADA /* LaunchScreen.storyboard in Resources */,
+				538354462057595E000DBADA /* Assets.xcassets in Resources */,
+				538354442057595E000DBADA /* Main.storyboard in Resources */,
+				5383545D205781C6000DBADA /* ZYYView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A49AE6E924CACDE24E98003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYYRACDemo/Pods-ZYYRACDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYYRACDemo/Pods-ZYYRACDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6348CF623B3B1C81D803A4AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYYRACDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BABF3B35961BDE0BE6E3A985 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYYRACDemo/Pods-ZYYRACDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		538354352057595E000DBADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538354412057595E000DBADA /* ViewController.m in Sources */,
+				5383544C2057595E000DBADA /* main.m in Sources */,
+				5383543E2057595E000DBADA /* AppDelegate.m in Sources */,
+				5383545B205781B5000DBADA /* ZYYView.m in Sources */,
+				5383545820576D9F000DBADA /* TwoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		538354422057595E000DBADA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538354432057595E000DBADA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		538354472057595E000DBADA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				538354482057595E000DBADA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5383544D2057595E000DBADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5383544E2057595E000DBADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		538354502057595E000DBADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB5C4A54E737864FD9E0413 /* Pods-ZYYRACDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZYYRACDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.ZYYRACDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		538354512057595E000DBADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8193F1929E943F51606ACE /* Pods-ZYYRACDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZYYRACDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.ZYYRACDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		538354342057595E000DBADA /* Build configuration list for PBXProject "ZYYRACDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5383544D2057595E000DBADA /* Debug */,
+				5383544E2057595E000DBADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5383544F2057595E000DBADA /* Build configuration list for PBXNativeTarget "ZYYRACDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538354502057595E000DBADA /* Debug */,
+				538354512057595E000DBADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 538354312057595E000DBADA /* Project object */;
+}
