@@ -54,7 +54,7 @@
 - (void)subjectCreate {
     RACSubject *subject = [RACSubject subject];
     
-    // 这个信号是接收不到的
+    // 这个信号是接收不到的，
     [subject sendNext:@"1"];
     
     [subject subscribeNext:^(id  _Nullable x) {
@@ -68,11 +68,16 @@
 }
 
 - (void)replaySubjectCreate {
-    RACReplaySubject *replaySubject = [RACReplaySubject subject];
-    
+    // RACSubject 既可以充当信号，也能自主发送信号
     // 允许有缓存事件
+    RACReplaySubject *replaySubject = [RACReplaySubject replaySubjectWithCapacity:1];
+    
     [replaySubject sendNext:@1];
     [replaySubject sendNext:@2];
+    
+    // 底层逻辑实现和 RACSignal 不一样
+    // 保存每一个订阅者，订阅者中包含 subscribeNext block
+    // sendNext 时，遍历订阅者，并调用 block
     
     [replaySubject subscribeNext:^(id  _Nullable x) {
         NSLog(@"第一个订阅者%@", x);
@@ -86,6 +91,8 @@
 
 - (void)goThroughArray {
     NSArray *numbers = @[@1, @2, @3];
+    
+    // rac_sequence 实现遍历
     [numbers.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@", x);
     }];
@@ -112,6 +119,7 @@
 }
 
 - (void)commandDemo {
+    // 用于处理事件的类，可以监控事件的执行过程
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         
         NSLog(@"执行命令");
@@ -122,15 +130,19 @@
         return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
             [subscriber sendNext:@"请求数据1"];
             [subscriber sendNext:@"请求数据2"];
+            
+            // 这句话必须要有，不然就会一直处于执行中的状态！
             [subscriber sendCompleted];
             
             return nil;
         }];
     }];
     
+    // 必须强引用，因为是延迟发送的
     _command = command;
     
     // 3. 订阅信号，屌丝用法
+    // executionSignals 是信号的信号。
     [command.executionSignals subscribeNext:^(id  _Nullable x) {
         [x subscribeNext:^(id  _Nullable x) {
             NSLog(@"%@", x);
