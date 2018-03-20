@@ -45,7 +45,7 @@ class ZYYRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moyaRequest()
+        
         
         createView()
     }
@@ -53,6 +53,10 @@ class ZYYRequestViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        moyaRequest()
     }
     
     
@@ -82,13 +86,20 @@ class ZYYRequestViewController: UIViewController {
     }
     
     func moyaRequest() {
+        ApiManagerProvider.request(.getHomeColumnList(moduleId: 1)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                print(moyaResponse)
+            case let .failure(error):
+                print(error)
+            }
+        }
+        
         ApiManagerProvider.request(.getActivityList(isTop: 1)) { result in
             switch result  {
             case let .success(moyaResponse):
                 if let data = try? moyaResponse.mapJSON() as! [String: Any], let list = Mapper<ZYYActivity>().mapArray(JSONObject: data["activityList"]){
-                    
                     print(list)
-//                    list.enumerated()
                 }
                 let statusCode = moyaResponse.statusCode // Int - 200, 401, 500, etc
                 print(statusCode)
