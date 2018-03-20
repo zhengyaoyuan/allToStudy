@@ -17,8 +17,13 @@
 
 @implementation POITableViewCell
 
+
+/**
+ 用于 viewModel 和 View 进行绑定
+ */
 - (void)bindWithViewModel:(POICellViewModel *)viewModel
 {
+    // 每次 cell 重用了，开始重新绑定
     RAC(_titleLabel, text) = [viewModel.titleSignal takeUntil:self.rac_prepareForReuseSignal];
     RAC(_priceLabel, attributedText) = [viewModel.priceSignal takeUntil:self.rac_prepareForReuseSignal];
     RAC(_rightFooterLabel, text) = [viewModel.rightFooterSignal takeUntil:self.rac_prepareForReuseSignal];

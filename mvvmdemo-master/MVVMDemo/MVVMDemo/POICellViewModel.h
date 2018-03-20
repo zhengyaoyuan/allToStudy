@@ -10,6 +10,10 @@
 #import "BaseCellViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+/**
+ 父类 ViewModel 包含 UI 属性，用于与 View 绑定
+ 主要是声明一些信号 这一层只有 UI！！
+ */
 @interface POICellViewModel : BaseCellViewModel
 
 @property (nonatomic) RACSignal *frontImageSignal; //UIImage

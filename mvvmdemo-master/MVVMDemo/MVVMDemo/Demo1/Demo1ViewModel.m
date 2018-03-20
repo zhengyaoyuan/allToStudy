@@ -25,6 +25,8 @@
 - (instancetype)init
 {
     if (self = [super init]) {
+        // executionSignals 变换而来
+        // executionSignals 是一个高阶信号
         _dataSignal = [[self.loadDataCommand.executionSignals flattenMap:^RACStream *(RACSignal *dataSignal) {
             LocationManager *locationManager = [LocationManager defaultLocationManager];
             return [dataSignal map:^id (RACTuple *data) {
@@ -40,6 +42,7 @@
                 }]] array];
             }];
         }] deliverOnMainThread];
+        // 由 errors 变换而来
         _errorSignal = self.loadDataCommand.errors;
     }
     return self;

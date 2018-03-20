@@ -11,29 +11,15 @@ import Moya
 
 let ApiManagerProvider = MoyaProvider<ApiManager>()
 
-extension Dictionary {
-    mutating func update(other:Dictionary) {
-        for (key,value) in other {
-            self.updateValue(value, forKey:key)
-        }
-    }
-    
-    
-    func convertToJson() -> String? {
-        
-        if let data = try? JSONSerialization.data(withJSONObject: self, options: JSONSerialization.WritingOptions.init(rawValue: 0)),
-           let JSONString = String(data: data, encoding: String.Encoding.utf8) {
-            return JSONString
-        } else {
-            return nil
-        }
-    }
-}
-
 enum ApiManager {
+    // http://api.bangzb.com/newBang/entrance?parameter={"moduleId":1,"userId":10100171,"FuncTag":"80010012","c":204,"a":0,"platform":3}
     case getHomeColumnList(moduleId: Int)
+    // http://api.bangzb.com/newBang/entrance?parameter={"userId":0,"c":204,"isTop":1,"platform":3,"a":0,"FuncTag":"80010004"}
     case getActivityList(isTop: Int)
 }
+
+fileprivate let customURLString = "http://api.bangzb.com/"
+fileprivate let customPath = "newBang/entrance"
 
 extension ApiManager: TargetType {
     var headers: [String : String]? {
@@ -41,31 +27,20 @@ extension ApiManager: TargetType {
     }
     
     
+    
     /// The target's base `URL`.
     var baseURL: URL {
-        
-        return URL.init(string: "http://api.bangzb.com/")!
+        return URL.init(string: customURLString)!
     }
     
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
-        
-        return "newBang/entrance"
-//        switch self {
-//        case .getDantangList(let page):
-//            return "v1/channels/\(page)/items"
-//        }
+        return customPath
     }
     
     /// The HTTP method used in the request.
     var method: Moya.Method {
-        
-        switch self {
-        
-        default:
-            return .get
-        }
-        
+        return .get
 //        switch self {
 //            
 //        case .Create(_, _, _):
@@ -90,29 +65,41 @@ extension ApiManager: TargetType {
 //        }
     }
     
-    var task: Task {
-        
-        var dic = ["platform": 3, "a": 0, "c": Bundle.main.infoDictionary!["StoreID"]!]
-        
-        switch self {
-        case .getHomeColumnList(let moduleId):
-            let individialDic = ["moduleId": moduleId]
+    func taskCreate(with param: HTTPRequestParam) -> Task {
+        if param is HttpRequestEncodedParam {
             
-            dic.update(other: individialDic)
+            return .requestPlain
+        } else {
+            print("不是 HttpRequestEncodedParam")
             
-            return .requestParameters(parameters: dic, encoding: URLEncoding.queryString)
-        case .getActivityList(let isTop):
+            let jsonEncoder = JSONEncoder()
             
-            dic.update(other: ["FuncTag": "80010004", "isTop": isTop])
-            
-            if let jsonString = dic.convertToJson() {
+            if let jsonData = try? jsonEncoder.encode(param),
+                let jsonString = String(data: jsonData, encoding: .utf8) {
+                
+                print("最终URL：\(customURLString)\(customPath)?parameter=\(jsonString)")
                 let finalDic = ["parameter": jsonString]
+                
                 return .requestParameters(parameters: finalDic, encoding: URLEncoding.queryString)
             } else {
                 return .requestPlain
             }
+            
         }
     }
+    
+    var task: Task {
+
+        switch self {
+        case .getHomeColumnList(let moduleId):
+            let param = HTTPRequestHomeBannerListParam(moduleId: moduleId, userId: 10100171)
+            return taskCreate(with: param)
+        case .getActivityList(let isTop):
+            let param = HTTPRequestActivityListParam(isTop: isTop)
+            return taskCreate(with: param)
+        }
+    }
+    
     
     /// Whether or not to perform Alamofire validation. Defaults to `false`.
     var validate: Bool {

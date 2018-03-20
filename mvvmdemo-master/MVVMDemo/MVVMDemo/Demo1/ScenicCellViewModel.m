@@ -25,10 +25,18 @@
     return self;
 }
 
+
+/**
+ 实现复杂的 UI 需求
+ */
 - (void)bindSignals
 {
     RACSignal *scenicSignal = [RACSignal return :self.scenic];
 
+    // 将景点 signal map 成其它 signal
+    // 业务逻辑 全部在这里完成
+    
+    // 将自己自定义的东西，存在了 父类定义的 view 中
     self.titleSignal = [scenicSignal map:^id (Scenic *scenic) {
         return scenic.name;
     }];

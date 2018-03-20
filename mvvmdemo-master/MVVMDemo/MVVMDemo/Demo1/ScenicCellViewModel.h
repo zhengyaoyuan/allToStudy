@@ -10,6 +10,10 @@
 #import "POICellViewModel.h"
 
 @class Scenic;
+
+/**
+ 子类 ViewModel，套用业务逻辑
+ */
 @interface ScenicCellViewModel : POICellViewModel
 
 @property (nonatomic) NSInteger currentCityID;

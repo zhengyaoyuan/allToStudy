@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <Mantle/Mantle.h>
+
+/**
+ Model 类
+ */
 @interface Scenic : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic) NSString *campaignTag;
