@@ -137,9 +137,10 @@ example("switchLatest") {
     let subject1 = BehaviorSubject(value: "⚽️")
     let subject2 = BehaviorSubject(value: "🍎")
     
-//    let variable = Variable(subject1)
-    let variable = BehaviorRelay(subject1)
+    // 这里有 信号的信号
+    let variable = Variable(subject1)
     
+    // 将信号的信号，拍扁成 信号，并且只会关注最后的那个 inner 信号
     variable.asObservable()
         .switchLatest()
         .subscribe(onNext: { print($0) })
@@ -154,6 +155,34 @@ example("switchLatest") {
     
     subject2.onNext("🍐")
 }
+
+example("switchLatest ZYY DEMO") {
+    let disposeBag = DisposeBag()
+    
+    // 创建了两个信号
+    let subject1 = BehaviorSubject(value: "11")
+    let subject2 = BehaviorSubject(value: "21")
+    
+    // 信号的信号
+    let variable = Variable(subject1)
+    
+    variable.asObservable()
+        .switchLatest()
+        .subscribe(onNext: { print($0) })
+        .disposed(by: disposeBag)
+    
+    subject1.onNext("12")
+    subject2.onNext("22")
+    
+    variable.value = subject2
+    
+    subject1.onNext("13")
+    subject2.onNext("23")
+    
+    variable.value = subject1
+}
+
+
 /*:
  > In this example, adding ⚾️ onto `subject1` after setting `variable.value` to `subject2` has no effect, because only the most recent inner `Observable` sequence (`subject2`) will emit elements.
  */

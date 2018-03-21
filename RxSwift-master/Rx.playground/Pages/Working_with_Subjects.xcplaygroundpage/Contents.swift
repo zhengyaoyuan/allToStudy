@@ -105,6 +105,15 @@ example("Variable") {
     variable.value = "🅰️"
     variable.value = "🅱️"
 }
+
+example("BehaviorRelay 自己加的demo") {
+    let disposeBag = DisposeBag()
+    let behaviorReplay = BehaviorSubject(value: "🔴");
+    
+    behaviorReplay.asObservable().addObserver("1").disposed(by: disposeBag)
+    // 怎么修改值？？
+    
+}
 //:  > Call `asObservable()` on a `Variable` instance in order to access its underlying `BehaviorSubject` sequence. `Variable`s do not implement the `on` operator (or, e.g., `onNext(_:)`), but instead expose a `value` property that can be used to get the current value, and also set a new value. Setting a new value will also add that value onto its underlying `BehaviorSubject` sequence.
 
 //: [Next](@next) - [Table of Contents](Table_of_Contents)

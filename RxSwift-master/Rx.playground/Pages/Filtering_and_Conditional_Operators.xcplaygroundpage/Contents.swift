@@ -36,7 +36,7 @@ example("filter") {
 */
 example("distinctUntilChanged") {
     let disposeBag = DisposeBag()
-    
+    // 会拦截连续的重复元素
     Observable.of("🐱", "🐷", "🐱", "🐱", "🐱", "🐵", "🐱")
         .distinctUntilChanged()
         .subscribe(onNext: { print($0) })

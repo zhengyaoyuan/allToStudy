@@ -69,6 +69,7 @@ example("retry") {
     let disposeBag = DisposeBag()
     var count = 1
     
+    // 重新订阅，重新来一次
     let sequenceThatErrors = Observable<String>.create { observer in
         observer.onNext("🍎")
         observer.onNext("🍐")
@@ -83,6 +84,7 @@ example("retry") {
         observer.onNext("🐶")
         observer.onNext("🐱")
         observer.onNext("🐭")
+        
         observer.onCompleted()
         
         return Disposables.create()

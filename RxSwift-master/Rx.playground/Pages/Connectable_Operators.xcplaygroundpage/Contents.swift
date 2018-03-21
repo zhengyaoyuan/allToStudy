@@ -43,13 +43,13 @@ func sampleWithoutConnectableOperators() {
 func sampleWithPublish() {
     printExampleHeader(#function)
     
+    // publish 把 Observable 变成 connectable 这样子是在共享订阅了
     let intSequence = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         .publish()
     
     _ = intSequence
         .subscribe(onNext: { print("Subscription 1:, Event: \($0)") })
     
-    delay(2) { _ = intSequence.connect() }
     
     delay(4) {
         _ = intSequence
@@ -60,6 +60,8 @@ func sampleWithPublish() {
         _ = intSequence
             .subscribe(onNext: { print("Subscription 3:, Event: \($0)") })
     }
+    
+    delay(8) { _ = intSequence.connect() }
 }
 
 //sampleWithPublish() // ⚠️ Uncomment to run this example; comment to stop running
@@ -74,7 +76,7 @@ func sampleWithPublish() {
  */
 func sampleWithReplayBuffer() {
     printExampleHeader(#function)
-    
+    // replay connect
     let intSequence = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         .replay(5)
     
@@ -104,6 +106,7 @@ func sampleWithReplayBuffer() {
 func sampleWithMulticast() {
     printExampleHeader(#function)
     
+    // 通过 subject 来广播信号 作为媒介
     let subject = PublishSubject<Int>()
     
     _ = subject
@@ -128,6 +131,6 @@ func sampleWithMulticast() {
     }
 }
 
-sampleWithMulticast() // ⚠️ Uncomment to run this example; comment to stop running
+//sampleWithMulticast() // ⚠️ Uncomment to run this example; comment to stop running
 
 //: [Next](@next) - [Table of Contents](Table_of_Contents)
