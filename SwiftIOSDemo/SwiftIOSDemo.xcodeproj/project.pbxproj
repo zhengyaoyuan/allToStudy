@@ -127,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				531798022043E69D006BAFD6 /* R.generated.swift */,
-				53F0532B20512573001B79B1 /* BaseSwiftKnowledge */,
 				538CF6EA204F85FE0096FA42 /* ZYYRxDemo */,
 				53832A7820316A04004D7A53 /* ZYYRequestManager */,
 				53832A4220316444004D7A53 /* AppDelegate.swift */,
@@ -184,13 +183,6 @@
 				538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */,
 			);
 			path = Numbers;
-			sourceTree = "<group>";
-		};
-		53F0532B20512573001B79B1 /* BaseSwiftKnowledge */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseSwiftKnowledge;
 			sourceTree = "<group>";
 		};
 		DAAF734A52B4888D02D992F8 /* Pods */ = {

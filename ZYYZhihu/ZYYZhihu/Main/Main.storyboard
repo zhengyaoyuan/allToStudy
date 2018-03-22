@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sY0-1c-eMz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--今日热闻-->
+        <scene sceneID="64R-f4-1eY">
+            <objects>
+                <viewController id="SCc-ff-DhN" customClass="ZYYMainViewController" customModule="ZYYZhihu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wx1-yg-kEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PcK-Cf-FKD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainTableViewCell" id="X6q-oI-pWr" customClass="ZYYMainTableViewCell" customModule="ZYYZhihu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X6q-oI-pWr" id="69Y-zn-vT1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKE-XR-f0G">
+                                                    <rect key="frame" x="285" y="15" width="75" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="4Jw-gI-xo0"/>
+                                                        <constraint firstAttribute="height" constant="60" id="dkT-gi-74j"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="又卡又烫还死机，一次彻底的清理让你的 Mac 恢复神气" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvR-Tu-vcc">
+                                                    <rect key="frame" x="15" y="15" width="258" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hKE-XR-f0G" firstAttribute="centerY" secondItem="69Y-zn-vT1" secondAttribute="centerY" id="1ho-wF-Sb7"/>
+                                                <constraint firstItem="UvR-Tu-vcc" firstAttribute="height" relation="lessThanOrEqual" secondItem="hKE-XR-f0G" secondAttribute="height" id="CcN-Af-sYf"/>
+                                                <constraint firstItem="UvR-Tu-vcc" firstAttribute="top" secondItem="hKE-XR-f0G" secondAttribute="top" id="KSa-Dp-wEx"/>
+                                                <constraint firstItem="hKE-XR-f0G" firstAttribute="leading" secondItem="UvR-Tu-vcc" secondAttribute="trailing" constant="12" id="POA-0j-yHK"/>
+                                                <constraint firstItem="UvR-Tu-vcc" firstAttribute="leading" secondItem="69Y-zn-vT1" secondAttribute="leading" constant="15" id="QMc-dk-kOX"/>
+                                                <constraint firstAttribute="trailing" secondItem="hKE-XR-f0G" secondAttribute="trailing" constant="15" id="jaq-wG-qic"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rightImageView" destination="hKE-XR-f0G" id="Lnk-Zd-7Y0"/>
+                                            <outlet property="titleLabel" destination="UvR-Tu-vcc" id="qTC-HF-iuO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z00-IH-ScY" firstAttribute="trailing" secondItem="PcK-Cf-FKD" secondAttribute="trailing" id="Td3-lC-jmK"/>
+                            <constraint firstItem="z00-IH-ScY" firstAttribute="bottom" secondItem="PcK-Cf-FKD" secondAttribute="bottom" id="UHX-dY-QIB"/>
+                            <constraint firstItem="PcK-Cf-FKD" firstAttribute="top" secondItem="z00-IH-ScY" secondAttribute="top" id="h9b-iP-HRQ"/>
+                            <constraint firstItem="PcK-Cf-FKD" firstAttribute="leading" secondItem="z00-IH-ScY" secondAttribute="leading" id="zt0-dn-CR9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z00-IH-ScY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="今日热闻" id="Ofu-YX-cWi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plq-1O-UUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="-293"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KP9-ow-c23">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sY0-1c-eMz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VRq-gD-VNb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SCc-ff-DhN" kind="relationship" relationship="rootViewController" id="UzR-5c-QDy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ijB-PD-gly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="-274"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.0078431372549019607" green="0.5607843137254902" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
