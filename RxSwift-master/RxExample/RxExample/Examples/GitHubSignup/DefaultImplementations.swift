@@ -18,8 +18,10 @@ import func Foundation.arc4random
 class GitHubDefaultValidationService: GitHubValidationService {
     let API: GitHubAPI
 
+    // 单例
     static let sharedValidationService = GitHubDefaultValidationService(API: GitHubDefaultAPI.sharedAPI)
 
+    // API 的类，也需要额外传入的
     init (API: GitHubAPI) {
         self.API = API
     }
@@ -28,6 +30,7 @@ class GitHubDefaultValidationService: GitHubValidationService {
     
     let minPasswordCount = 5
     
+    // 实现了 四个验证的协议， 每一个独立的验证逻辑都在这里面，API 也是在这里调用的！
     func validateUsername(_ username: String) -> Observable<ValidationResult> {
         if username.isEmpty {
             return .just(.empty)
@@ -84,6 +87,7 @@ class GitHubDefaultValidationService: GitHubValidationService {
 class GitHubDefaultAPI : GitHubAPI {
     let URLSession: Foundation.URLSession
 
+    // 单例
     static let sharedAPI = GitHubDefaultAPI(
         URLSession: Foundation.URLSession.shared
     )
@@ -95,6 +99,7 @@ class GitHubDefaultAPI : GitHubAPI {
     func usernameAvailable(_ username: String) -> Observable<Bool> {
         // this is ofc just mock, but good enough
         
+        // 纯粹只是看看这个用户名的链接是否存在， just mock
         let url = URL(string: "https://github.com/\(username.URLEscaped)")!
         let request = URLRequest(url: url)
         return self.URLSession.rx.response(request: request)

@@ -23,24 +23,21 @@ class NumbersViewController: ViewController {
         bind()
         
         // orEmpty: Convert String? to String
+//        Observable.combineLatest(number1.rx.text.orEmpty, number2.rx.text.orEmpty, number3.rx.text.orEmpty) { textValue1, textValue2, textValue3 -> Int in
+//                return (Int(textValue1) ?? 0) + (Int(textValue2) ?? 0) + (Int(textValue3) ?? 0)
+//            }
+//            .map { $0.description }
+//            .bind(to: result.rx.text)
+//            .disposed(by: disposeBag)
+    }
+    
+    func bind() {
+        // 每个操作符要做的事情，要区分清楚！！
         Observable.combineLatest(number1.rx.text.orEmpty, number2.rx.text.orEmpty, number3.rx.text.orEmpty) { textValue1, textValue2, textValue3 -> Int in
                 return (Int(textValue1) ?? 0) + (Int(textValue2) ?? 0) + (Int(textValue3) ?? 0)
             }
             .map { $0.description }
             .bind(to: result.rx.text)
             .disposed(by: disposeBag)
-    }
-    
-    func bind() {
-        // 每个操作符要做的事情，要区分清楚！！
-        Observable.combineLatest(number1.rx.text.orEmpty, number2.rx.text.orEmpty, number3.rx.text.orEmpty) { textValue1, textValue2, textValue3 -> Int in
-            return (Int(textValue1) ?? 0) + (Int(textValue2) ?? 0) + (Int(textValue3) ?? 0)
-        }
-            .map { intNum -> String in
-               return intNum.description
-            }
-            .bind(to: result.rx.text)
-            .diposed(by: disposeBag)
-//            .disposed(by: disposeBag)
     }
 }

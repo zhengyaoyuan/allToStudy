@@ -16,11 +16,14 @@ class SimpleTableViewExampleViewController : ViewController, UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 创建 0 到 19 的字符串数组
         let items = Observable.just(
             (0..<20).map { "\($0)" }
         )
-
+        
+        // 将数据源与 cell 绑定
         items
+            // cellType 代表 cell 的 具体类
             .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
                 cell.textLabel?.text = "\(element) @ row \(row)"
             }

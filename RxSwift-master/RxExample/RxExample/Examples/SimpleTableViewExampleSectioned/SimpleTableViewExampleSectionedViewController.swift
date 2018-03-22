@@ -31,6 +31,7 @@ class SimpleTableViewExampleSectionedViewController
 
         let dataSource = self.dataSource
 
+        // 创建 Observable 其元素为 好几个SectionModel
         let items = Observable.just([
             SectionModel(model: "First section", items: [
                     1.0,
@@ -49,7 +50,7 @@ class SimpleTableViewExampleSectionedViewController
                 ])
             ])
 
-
+        // 把这些数据绑定到数据源上去
         items
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

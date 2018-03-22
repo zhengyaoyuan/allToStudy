@@ -40,6 +40,7 @@ class GitHubSignupViewController1 : ViewController {
             )
         )
 
+        // 将 viewModel 里处理的值 订阅一下 等同于绑定一样
         // bind results to  {
         viewModel.signupEnabled
             .subscribe(onNext: { [weak self] valid  in
@@ -49,6 +50,7 @@ class GitHubSignupViewController1 : ViewController {
             .disposed(by: disposeBag)
 
         viewModel.validatedUsername
+            // validationResult 是从哪儿来的？？
             .bind(to: usernameValidationOutlet.rx.validationResult)
             .disposed(by: disposeBag)
 

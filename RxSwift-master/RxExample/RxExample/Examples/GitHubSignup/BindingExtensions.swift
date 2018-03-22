@@ -45,6 +45,7 @@ extension ValidationResult {
     }
 }
 
+// 添加的扩展
 extension Reactive where Base: UILabel {
     var validationResult: Binder<ValidationResult> {
         return Binder(base) { label, result in
