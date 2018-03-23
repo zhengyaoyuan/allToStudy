@@ -1,11 +1,12 @@
 PODS:
   - Alamofire (4.6.0)
-  - Kingfisher (4.6.1)
-  - Moya (11.0.0):
-    - Moya/Core (= 11.0.0)
-  - Moya/Core (11.0.0):
+  - Kingfisher (4.6.4)
+  - Moya/Core (11.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Moya/RxSwift (11.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - ObjectMapper (3.1.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
@@ -21,7 +22,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.6.0)
   - Kingfisher (~> 4.6.1)
-  - Moya (~> 11.0.0)
+  - Moya/RxSwift
   - ObjectMapper (~> 3.1.0)
   - R.swift
   - RxCocoa
@@ -32,8 +33,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
-  Moya: be29766339783963a70d1279d69c891ab3a1393c
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+  Moya: 3d594ada51a21cc02b18739ab578a1984f900c8a
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
@@ -44,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftyAttributes: cef9463f6e7da1ab393896ca036c9ac37d8a406b
 
-PODFILE CHECKSUM: 37f0b0c487576ed4ab7fea7aa53949f8b051e4d0
+PODFILE CHECKSUM: 6c39a5e0c28273bc8358587827b659f175a541ab
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.3.1

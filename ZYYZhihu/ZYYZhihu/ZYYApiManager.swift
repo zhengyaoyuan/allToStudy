@@ -8,16 +8,17 @@
 
 import UIKit
 import Moya
+import RxSwift
 
 let ZYYApiManagerProvider = MoyaProvider<ZYYApiManager>()
 
 enum ZYYApiManager {
     // 获取最新新闻
     // https://news-at.zhihu.com/api/4/news/latest
-    case getLatestNews
+    case getLatestStories
     // 过往新闻
     // https://news-at.zhihu.com/api/4/news/before/20131119
-    case getNewsBefore(date: String)
+    case getStoriesBefore(date: String)
 }
 
 fileprivate let customURLString = "https://news-at.zhihu.com/api/4/"
@@ -35,9 +36,9 @@ extension ZYYApiManager: TargetType {
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
         switch self {
-        case .getLatestNews:
+        case .getLatestStories:
             return "news/latest"
-        case .getNewsBefore(let date):
+        case .getStoriesBefore(let date):
             return "news/before/\(date)"
         }
     }

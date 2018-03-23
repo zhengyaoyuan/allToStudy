@@ -38,10 +38,14 @@ example("flatMap and flatMapLatest") {
     let 👦🏻 = Player(score: Variable(80))
     let 👧🏼 = Player(score: Variable(90))
 
-    
+    // 这里 player Variable 也是 subject 也是一个 Observable，修改 value，等于说发射元素
+    //
     let player = Variable(👦🏻)
     
     player.asObservable()
+//        .map { $0.score.asObservable() }
+        // $0 就是 吐出来的元素 ，block 里面需要做的是将元素转化成 return Observable
+        // flatMap 本身会负责把它拍扁
         .flatMap { $0.score.asObservable() } // Change flatMap to flatMapLatest and observe change in printed output
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)

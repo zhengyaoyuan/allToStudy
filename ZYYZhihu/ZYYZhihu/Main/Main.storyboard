@@ -70,7 +70,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z00-IH-ScY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="今日热闻" id="Ofu-YX-cWi"/>
+                    <navigationItem key="navigationItem" title="今日热闻" id="Ofu-YX-cWi">
+                        <barButtonItem key="rightBarButtonItem" title="刷新" id="1HN-VD-8tY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="refreshBtn" destination="1HN-VD-8tY" id="p1L-4l-WJP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plq-1O-UUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

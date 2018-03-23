@@ -41,6 +41,7 @@ class GithubSignupViewModel2 {
     // }
 
     init(
+        // 监听 输入的变动
         input: (
             username: Driver<String>,
             password: Driver<String>,

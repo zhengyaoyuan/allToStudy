@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ZYYMainViewController: UIViewController {
 
+    @IBOutlet weak var refreshBtn: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        refreshBtn.rx.tap.asSignal()
     }
 
     override func didReceiveMemoryWarning() {
