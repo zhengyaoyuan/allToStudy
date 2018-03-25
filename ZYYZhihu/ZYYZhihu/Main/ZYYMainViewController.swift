@@ -18,12 +18,9 @@ class ZYYMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshBtn.rx.tap.asSignal()
+//        refreshBtn.rx.tap.asSignal()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
+    
 
 }

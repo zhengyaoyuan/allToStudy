@@ -18,6 +18,7 @@
 		5334ABD12063E887003A188D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334ABD02063E887003A188D /* R.generated.swift */; };
 		5334ABD32063E9BE003A188D /* ZYYMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334ABD22063E9BD003A188D /* ZYYMainModel.swift */; };
 		5334ABD52063EC65003A188D /* ZYYApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5334ABD42063EC65003A188D /* ZYYApiManager.swift */; };
+		53451EB0206782A300BA54EE /* Observable+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53451EAF206782A300BA54EE /* Observable+ObjectMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5334ABD02063E887003A188D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		5334ABD22063E9BD003A188D /* ZYYMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYMainModel.swift; sourceTree = "<group>"; };
 		5334ABD42063EC65003A188D /* ZYYApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYApiManager.swift; sourceTree = "<group>"; };
+		53451EAF206782A300BA54EE /* Observable+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+ObjectMapper.swift"; sourceTree = "<group>"; };
 		ADB10837E22E9BFC16B820A5 /* Pods-ZYYZhihu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYYZhihu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYYZhihu/Pods-ZYYZhihu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				5304FAAB2063D09D006A6CEF /* ZYYMainViewController.swift */,
 				5334ABCB2063E4A6003A188D /* ZYYMainViewModel.swift */,
 				5334ABD22063E9BD003A188D /* ZYYMainModel.swift */,
+				53451EAF206782A300BA54EE /* Observable+ObjectMapper.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				5334ABCC2063E4A6003A188D /* ZYYMainViewModel.swift in Sources */,
 				5304FAAC2063D09D006A6CEF /* ZYYMainViewController.swift in Sources */,
 				5334ABD12063E887003A188D /* R.generated.swift in Sources */,
+				53451EB0206782A300BA54EE /* Observable+ObjectMapper.swift in Sources */,
 				5334ABC62063E043003A188D /* ZYYMainTableViewCell.swift in Sources */,
 				5304FA972063CEAB006A6CEF /* ZYYAppDelegate.swift in Sources */,
 				5334ABD32063E9BE003A188D /* ZYYMainModel.swift in Sources */,

@@ -9,6 +9,21 @@
 import UIKit
 import ObjectMapper
 
+class ZYYResponseModel: Mappable {
+    var date: String?
+    var stories: [ZYYNormalStoryModel]?
+    var top_stories: [ZYYTopStoryModel]?
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        date <- map["date"]
+        stories <- map["stories"]
+        top_stories <- map["top_stories"]
+    }
+}
+
 class ZYYStoryModel: Mappable {
     var title: String?
     var ga_prefix: String?
