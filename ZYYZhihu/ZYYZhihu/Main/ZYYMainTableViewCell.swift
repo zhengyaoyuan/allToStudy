@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ZYYMainTableViewCell: UITableViewCell {
 
@@ -18,11 +19,16 @@ class ZYYMainTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // model 如何配置 cell
+    func configCell(With model: ZYYNormalStoryModel) {
+        if let title = model.title {
+            titleLabel.text = title
+        }
+        
+        if let images = model.images, images.count > 0 {
+            let imageURL = images[0]
+            rightImageView.kf.setImage(with: URL.init(string: imageURL))
+        }
     }
-
 }

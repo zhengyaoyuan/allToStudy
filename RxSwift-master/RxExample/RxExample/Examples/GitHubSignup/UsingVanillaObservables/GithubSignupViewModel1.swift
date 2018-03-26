@@ -24,6 +24,7 @@ This is example where view model is mutable. Some consider this to be MVVM, some
 class GithubSignupViewModel1 {
     // outputs {
 
+    
     let validatedUsername: Observable<ValidationResult>
     let validatedPassword: Observable<ValidationResult>
     let validatedPasswordRepeated: Observable<ValidationResult>
@@ -43,8 +44,8 @@ class GithubSignupViewModel1 {
     /// 初始化方法
     ///
     /// - Parameters:
-    ///   - input: 输入包括用户名、密码、重复密码、点击注册按钮的动作
-    ///   - dependency: 网络请求、验证服务、线框图
+    ///   - input: 输入包括用户名、密码、重复密码的输入变化、点击注册按钮的动作
+    ///   - dependency: 网络请求、验证服务（单步的）、线框图？？
     init(input: (
             username: Observable<String>,
             password: Observable<String>,
@@ -69,11 +70,16 @@ class GithubSignupViewModel1 {
         */
 
         // username 检测用到了真正的请求，所以可能有多个请求同时返回，我们只需要取最晚发出的请求就可以了！！
+        // Observable<String> to Observable<ValidationResult>
+        // flatMapLatest 输入的是 element String， return 一个 Observable<ValidationResult>，等于说会有连续好多个信号
+        // input.username 会持续不断地吐出事件，导致网络请求也会不断有，也会吐出事件，这里用 flatMapLatest 是正确的！！
         validatedUsername = input.username
             .flatMapLatest { username in
                 // 这里有用到网络请求！！ validateUsername
+                // return Observable<ValidationResult>  会被不断拍扁的
                 return validationService.validateUsername(username)
                     .observeOn(MainScheduler.instance)
+                    // 处理错误时，返回
                     .catchErrorJustReturn(.failed(message: "Error contacting server"))
             }
             .share(replay: 1)
@@ -132,4 +138,5 @@ class GithubSignupViewModel1 {
             .distinctUntilChanged()
             .share(replay: 1)
     }
+    
 }

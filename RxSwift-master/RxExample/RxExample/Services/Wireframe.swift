@@ -58,6 +58,8 @@ class DefaultWireframe: Wireframe {
 
     func promptFor<Action : CustomStringConvertible>(_ message: String, cancelAction: Action, actions: [Action]) -> Observable<Action> {
         #if os(iOS)
+            // create Observable
+            // Action 从哪里对应的？
         return Observable.create { observer in
             let alertView = UIAlertController(title: "RxExample", message: message, preferredStyle: .alert)
             alertView.addAction(UIAlertAction(title: cancelAction.description, style: .cancel) { _ in

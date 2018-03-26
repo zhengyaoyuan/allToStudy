@@ -75,6 +75,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="refreshBtn" destination="1HN-VD-8tY" id="p1L-4l-WJP"/>
+                        <outlet property="tableView" destination="PcK-Cf-FKD" id="Ghg-nO-BUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plq-1O-UUp" userLabel="First Responder" sceneMemberID="firstResponder"/>

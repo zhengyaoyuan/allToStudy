@@ -41,14 +41,20 @@ class GitHubSignupViewController2 : ViewController {
         )
 
         // bind results to  {
+        
+        //  signupEnabled 的类型 Driver<Bool>
+        // drive 也就是 subscribe，不过是运用在 Drvier 上面
         viewModel.signupEnabled
+            // valid 是 Bool 类型
             .drive(onNext: { [weak self] valid  in
                 self?.signupOutlet.isEnabled = valid
                 self?.signupOutlet.alpha = valid ? 1.0 : 0.5
             })
             .disposed(by: disposeBag)
 
+        // Driver<ValidationResult> 与
         viewModel.validatedUsername
+            // usernameValidationOutlet.rx.validationResult 是自己做的 extension
             .drive(usernameValidationOutlet.rx.validationResult)
             .disposed(by: disposeBag)
 
@@ -71,6 +77,7 @@ class GitHubSignupViewController2 : ViewController {
             .disposed(by: disposeBag)
         //}
 
+        // 这一部分，只是订阅了个 点击背景的信号 和 viewModel 没有关系！
         let tapBackground = UITapGestureRecognizer()
         tapBackground.rx.event
             .subscribe(onNext: { [weak self] _ in

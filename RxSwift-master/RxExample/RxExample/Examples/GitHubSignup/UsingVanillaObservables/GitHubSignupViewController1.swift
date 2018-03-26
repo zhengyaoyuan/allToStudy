@@ -25,7 +25,14 @@ class GitHubSignupViewController1 : ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /* 初始化 viewModel
+         input
+         1、usernameOutlet.rx.text.orEmpty 传入一个 ControlProperty ，是被监听对象，所以可以 asObservable()
+         2、tap 是一个 ControlEvent，是一个event，可以被监听， 同样可以 asObservable()
+         dependency
+         1、 API 里面封装了各种请求
+         2、 GitHubDefaultValidationService 里面封装的是单个判断逻辑
+         */
         let viewModel = GithubSignupViewModel1(
             input: (
                 username: usernameOutlet.rx.text.orEmpty.asObservable(),
