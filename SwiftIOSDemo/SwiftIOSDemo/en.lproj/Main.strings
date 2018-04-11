@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "present Demo"; ObjectID = "2z3-mu-b7l"; */
+"2z3-mu-b7l.text" = "present Demo";
+
+/* Class = "UILabel"; text = "Bindings"; ObjectID = "3LH-yT-z0e"; */
+"3LH-yT-z0e.text" = "Bindings";
+
+/* Class = "UINavigationItem"; title = "我的"; ObjectID = "GaD-Mn-oJR"; */
+"GaD-Mn-oJR.title" = "我的";
+
+/* Class = "UITableViewSection"; headerTitle = "Section-3"; ObjectID = "JID-h4-0YQ"; */
+"JID-h4-0YQ.headerTitle" = "Section-3";
+
+/* Class = "UILabel"; text = "扫一扫"; ObjectID = "Pz6-ig-pl5"; */
+"Pz6-ig-pl5.text" = "扫一扫";
+
+/* Class = "UIViewController"; title = "网络请求和模型"; ObjectID = "Vy3-4b-kdu"; */
+"Vy3-4b-kdu.title" = "网络请求和模型";
+
+/* Class = "UITabBarItem"; title = "RxExample"; ObjectID = "YHT-a7-kqZ"; */
+"YHT-a7-kqZ.title" = "RxExample";
+
+/* Class = "UITabBarItem"; title = "我的"; ObjectID = "YOE-Zz-akZ"; */
+"YOE-Zz-akZ.title" = "我的";
+
+/* Class = "UITableViewSection"; headerTitle = "Section-1"; ObjectID = "bHq-bC-NER"; */
+"bHq-bC-NER.headerTitle" = "Section-1";
+
+/* Class = "UILabel"; text = "Adding numbers"; ObjectID = "bsV-xC-aNc"; */
+"bsV-xC-aNc.text" = "Adding numbers";
+
+/* Class = "UITableViewSection"; headerTitle = "Section-2"; ObjectID = "cTe-Bv-bDh"; */
+"cTe-Bv-bDh.headerTitle" = "Section-2";
+
+/* Class = "UILabel"; text = "选取图片显示"; ObjectID = "v5R-44-IP7"; */
+"v5R-44-IP7.text" = "选取图片显示";
+
+/* Class = "UILabel"; text = "网络请求"; ObjectID = "wFm-J6-hg5"; */
+"wFm-J6-hg5.text" = "网络请求";
+
+/* Class = "UILabel"; text = "Labelsdfsdf"; ObjectID = "wOg-eR-ZEi"; */
+"wOg-eR-ZEi.text" = "Labelsdfsdf";
+
+/* Class = "UITabBarItem"; title = "首页"; ObjectID = "xFM-kQ-qNk"; */
+"xFM-kQ-qNk.title" = "首页";
+
+/* Class = "UITableViewSection"; headerTitle = "练习"; ObjectID = "yFB-wg-ZX3"; */
+"yFB-wg-ZX3.headerTitle" = "练习";

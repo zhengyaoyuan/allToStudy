@@ -41,11 +41,23 @@ class ZYYActivity: Mappable, CustomStringConvertible {
 class ZYYRequestViewController: UIViewController {
 
     
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let str = "sdkgjskdgjsdgjsdljsdlfjlsdljfdslfdsjfds"
         
+        
+        let options : NSStringDrawingOptions = .usesLineFragmentOrigin
+        
+        let height = ceil(str.boundingRect(with: CGSize(width: 50.0, height: Double(MAXFLOAT)), options: options, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15.0)], context: nil).height)
+        
+        let fontHeight = UIFont.systemFont(ofSize: 15.0).lineHeight
+        
+        let numOfLines = Int(ceil(height / fontHeight))
+        print("一共有\(numOfLines)行")
+        label.text = str
         
         createView()
     }

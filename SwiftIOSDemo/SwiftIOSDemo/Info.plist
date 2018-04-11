@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>app请求使用相机</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>请求访问图库</string>
 	<key>StoreID</key>
 	<integer>204</integer>
 	<key>NSAppTransportSecurity</key>

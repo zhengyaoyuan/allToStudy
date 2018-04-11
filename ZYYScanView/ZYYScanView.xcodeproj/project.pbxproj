@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		532B1DE4206E6A1900A52F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B1DE3206E6A1900A52F9E /* AppDelegate.swift */; };
+		532B1DE6206E6A1900A52F9E /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532B1DE5206E6A1900A52F9E /* ScanCodeViewController.swift */; };
+		532B1DE9206E6A1900A52F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532B1DE7206E6A1900A52F9E /* Main.storyboard */; };
+		532B1DEB206E6A1900A52F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532B1DEA206E6A1900A52F9E /* Assets.xcassets */; };
+		532B1DEE206E6A1900A52F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532B1DEC206E6A1900A52F9E /* LaunchScreen.storyboard */; };
+		841335EC5BD5B81F88940332 /* Pods_ZYYScanView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661ABC8601B43C0EDFA67537 /* Pods_ZYYScanView.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C4E58EDE45E12079A1FAED7 /* Pods-ZYYScanView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYYScanView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYYScanView/Pods-ZYYScanView.release.xcconfig"; sourceTree = "<group>"; };
+		532B1DE0206E6A1900A52F9E /* ZYYScanView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYYScanView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		532B1DE3206E6A1900A52F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		532B1DE5206E6A1900A52F9E /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		532B1DE8206E6A1900A52F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		532B1DEA206E6A1900A52F9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		532B1DED206E6A1900A52F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		532B1DEF206E6A1900A52F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661ABC8601B43C0EDFA67537 /* Pods_ZYYScanView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYYScanView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10DA030E3388415E095510C /* Pods-ZYYScanView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYYScanView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYYScanView/Pods-ZYYScanView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		532B1DDD206E6A1900A52F9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841335EC5BD5B81F88940332 /* Pods_ZYYScanView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		532B1DD7206E6A1900A52F9E = {
+			isa = PBXGroup;
+			children = (
+				532B1DE2206E6A1900A52F9E /* ZYYScanView */,
+				532B1DE1206E6A1900A52F9E /* Products */,
+				AEC65EF95A379C694981C6E0 /* Pods */,
+				AF464F4F479290448F2E3D82 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		532B1DE1206E6A1900A52F9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				532B1DE0206E6A1900A52F9E /* ZYYScanView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		532B1DE2206E6A1900A52F9E /* ZYYScanView */ = {
+			isa = PBXGroup;
+			children = (
+				532B1DE3206E6A1900A52F9E /* AppDelegate.swift */,
+				532B1DE5206E6A1900A52F9E /* ScanCodeViewController.swift */,
+				532B1DE7206E6A1900A52F9E /* Main.storyboard */,
+				532B1DEA206E6A1900A52F9E /* Assets.xcassets */,
+				532B1DEC206E6A1900A52F9E /* LaunchScreen.storyboard */,
+				532B1DEF206E6A1900A52F9E /* Info.plist */,
+			);
+			path = ZYYScanView;
+			sourceTree = "<group>";
+		};
+		AEC65EF95A379C694981C6E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D10DA030E3388415E095510C /* Pods-ZYYScanView.debug.xcconfig */,
+				3C4E58EDE45E12079A1FAED7 /* Pods-ZYYScanView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF464F4F479290448F2E3D82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661ABC8601B43C0EDFA67537 /* Pods_ZYYScanView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		532B1DDF206E6A1900A52F9E /* ZYYScanView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 532B1DF2206E6A1900A52F9E /* Build configuration list for PBXNativeTarget "ZYYScanView" */;
+			buildPhases = (
+				713552230F3E3AD7E2C11617 /* [CP] Check Pods Manifest.lock */,
+				532B1DDC206E6A1900A52F9E /* Sources */,
+				532B1DDD206E6A1900A52F9E /* Frameworks */,
+				532B1DDE206E6A1900A52F9E /* Resources */,
+				348584B9FF3D6EC44C9E9AC0 /* [CP] Embed Pods Frameworks */,
+				995BF74E1A733133973F0D74 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYYScanView;
+			productName = ZYYScanView;
+			productReference = 532B1DE0206E6A1900A52F9E /* ZYYScanView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		532B1DD8206E6A1900A52F9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "郑尧元";
+				TargetAttributes = {
+					532B1DDF206E6A1900A52F9E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 532B1DDB206E6A1900A52F9E /* Build configuration list for PBXProject "ZYYScanView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 532B1DD7206E6A1900A52F9E;
+			productRefGroup = 532B1DE1206E6A1900A52F9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				532B1DDF206E6A1900A52F9E /* ZYYScanView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		532B1DDE206E6A1900A52F9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				532B1DEE206E6A1900A52F9E /* LaunchScreen.storyboard in Resources */,
+				532B1DEB206E6A1900A52F9E /* Assets.xcassets in Resources */,
+				532B1DE9206E6A1900A52F9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		348584B9FF3D6EC44C9E9AC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYYScanView/Pods-ZYYScanView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYYScanView/Pods-ZYYScanView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		713552230F3E3AD7E2C11617 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYYScanView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		995BF74E1A733133973F0D74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYYScanView/Pods-ZYYScanView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		532B1DDC206E6A1900A52F9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				532B1DE6206E6A1900A52F9E /* ScanCodeViewController.swift in Sources */,
+				532B1DE4206E6A1900A52F9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		532B1DE7206E6A1900A52F9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532B1DE8206E6A1900A52F9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		532B1DEC206E6A1900A52F9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532B1DED206E6A1900A52F9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		532B1DF0206E6A1900A52F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		532B1DF1206E6A1900A52F9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		532B1DF3206E6A1900A52F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D10DA030E3388415E095510C /* Pods-ZYYScanView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 492W5NPSAE;
+				INFOPLIST_FILE = ZYYScanView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.ZYYScanView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		532B1DF4206E6A1900A52F9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E58EDE45E12079A1FAED7 /* Pods-ZYYScanView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 492W5NPSAE;
+				INFOPLIST_FILE = ZYYScanView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.ZYYScanView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		532B1DDB206E6A1900A52F9E /* Build configuration list for PBXProject "ZYYScanView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				532B1DF0206E6A1900A52F9E /* Debug */,
+				532B1DF1206E6A1900A52F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		532B1DF2206E6A1900A52F9E /* Build configuration list for PBXNativeTarget "ZYYScanView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				532B1DF3206E6A1900A52F9E /* Debug */,
+				532B1DF4206E6A1900A52F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 532B1DD8206E6A1900A52F9E /* Project object */;
+}

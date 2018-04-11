@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		531798032043E69D006BAFD6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531798022043E69D006BAFD6 /* R.generated.swift */; };
+		532A48EE20730FB700EA3DB9 /* ZYYLocalizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532A48ED20730FB700EA3DB9 /* ZYYLocalizeVC.swift */; };
+		532A48F1207310F300EA3DB9 /* Localize.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532A48F3207310F300EA3DB9 /* Localize.storyboard */; };
 		5376166420328752008D6CB4 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5376166320328752008D6CB4 /* ApiManager.swift */; };
 		53832A4320316444004D7A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A4220316444004D7A53 /* AppDelegate.swift */; };
 		53832A4820316444004D7A53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53832A4620316444004D7A53 /* Main.storyboard */; };
@@ -20,6 +22,9 @@
 		53832A772031698E004D7A53 /* ZYYRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53832A762031698E004D7A53 /* ZYYRequestViewController.swift */; };
 		538CF6F2204F89DE0096FA42 /* Numbers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538CF6F0204F89DE0096FA42 /* Numbers.storyboard */; };
 		538CF6F3204F89DE0096FA42 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */; };
+		53B73BAD206E59E700C623A0 /* ScanCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B73BAC206E59E700C623A0 /* ScanCodeViewController.swift */; };
+		53CF63EC2071B902008B0AF2 /* ZYYPresentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF63EB2071B902008B0AF2 /* ZYYPresentVC.swift */; };
+		53E414022071095500CFB0FC /* ZYYPickImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E414012071095500CFB0FC /* ZYYPickImageVC.swift */; };
 		53F2077B2060D8FC006F44DD /* HTTPRequestParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2077A2060D8FC006F44DD /* HTTPRequestParam.swift */; };
 		5ACA81F93BA1F5473BBBBF08 /* Pods_SwiftIOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28A2FBF00926B743BB0EF01 /* Pods_SwiftIOSDemo.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		531798022043E69D006BAFD6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		532A48ED20730FB700EA3DB9 /* ZYYLocalizeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYLocalizeVC.swift; sourceTree = "<group>"; };
+		532A48F2207310F300EA3DB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Localize.storyboard; sourceTree = "<group>"; };
 		5376166320328752008D6CB4 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		53832A3F20316444004D7A53 /* SwiftIOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53832A4220316444004D7A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +68,10 @@
 		53832A762031698E004D7A53 /* ZYYRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYRequestViewController.swift; sourceTree = "<group>"; };
 		538CF6F0204F89DE0096FA42 /* Numbers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Numbers.storyboard; sourceTree = "<group>"; };
 		538CF6F1204F89DE0096FA42 /* NumbersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		53B73BAC206E59E700C623A0 /* ScanCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeViewController.swift; sourceTree = "<group>"; };
+		53CF63EB2071B902008B0AF2 /* ZYYPresentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYPresentVC.swift; sourceTree = "<group>"; };
+		53CF63F22071FDA9008B0AF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		53E414012071095500CFB0FC /* ZYYPickImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYYPickImageVC.swift; sourceTree = "<group>"; };
 		53F2077A2060D8FC006F44DD /* HTTPRequestParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestParam.swift; sourceTree = "<group>"; };
 		649F4C05B38E0D5394FCD706 /* Pods-SwiftIOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftIOSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftIOSDemo/Pods-SwiftIOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C28A2FBF00926B743BB0EF01 /* Pods_SwiftIOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftIOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +144,11 @@
 				53832A74203167AB004D7A53 /* ZYYHomeTableViewController.swift */,
 				53832A762031698E004D7A53 /* ZYYRequestViewController.swift */,
 				53832A7220316515004D7A53 /* ZYYMeViewController.swift */,
+				53B73BAC206E59E700C623A0 /* ScanCodeViewController.swift */,
+				53E414012071095500CFB0FC /* ZYYPickImageVC.swift */,
+				53CF63EB2071B902008B0AF2 /* ZYYPresentVC.swift */,
+				532A48ED20730FB700EA3DB9 /* ZYYLocalizeVC.swift */,
+				532A48F3207310F300EA3DB9 /* Localize.storyboard */,
 				53832A4620316444004D7A53 /* Main.storyboard */,
 				53832A4920316444004D7A53 /* Assets.xcassets */,
 				53832A4B20316444004D7A53 /* LaunchScreen.storyboard */,
@@ -266,6 +282,7 @@
 				TargetAttributes = {
 					53832A3E20316444004D7A53 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					53832A5220316444004D7A53 = {
@@ -306,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53832A4D20316444004D7A53 /* LaunchScreen.storyboard in Resources */,
+				532A48F1207310F300EA3DB9 /* Localize.storyboard in Resources */,
 				538CF6F2204F89DE0096FA42 /* Numbers.storyboard in Resources */,
 				53832A4A20316444004D7A53 /* Assets.xcassets in Resources */,
 				53832A4820316444004D7A53 /* Main.storyboard in Resources */,
@@ -422,11 +440,15 @@
 			files = (
 				53832A7320316515004D7A53 /* ZYYMeViewController.swift in Sources */,
 				53832A772031698E004D7A53 /* ZYYRequestViewController.swift in Sources */,
+				53B73BAD206E59E700C623A0 /* ScanCodeViewController.swift in Sources */,
 				5376166420328752008D6CB4 /* ApiManager.swift in Sources */,
 				53832A4320316444004D7A53 /* AppDelegate.swift in Sources */,
 				53F2077B2060D8FC006F44DD /* HTTPRequestParam.swift in Sources */,
+				53CF63EC2071B902008B0AF2 /* ZYYPresentVC.swift in Sources */,
 				538CF6F3204F89DE0096FA42 /* NumbersViewController.swift in Sources */,
 				53832A75203167AB004D7A53 /* ZYYHomeTableViewController.swift in Sources */,
+				53E414022071095500CFB0FC /* ZYYPickImageVC.swift in Sources */,
+				532A48EE20730FB700EA3DB9 /* ZYYLocalizeVC.swift in Sources */,
 				531798032043E69D006BAFD6 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,10 +485,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		532A48F3207310F300EA3DB9 /* Localize.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				532A48F2207310F300EA3DB9 /* en */,
+			);
+			name = Localize.storyboard;
+			sourceTree = "<group>";
+		};
 		53832A4620316444004D7A53 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				53832A4720316444004D7A53 /* Base */,
+				53CF63F22071FDA9008B0AF2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -594,6 +625,7 @@
 			baseConfigurationReference = 649F4C05B38E0D5394FCD706 /* Pods-SwiftIOSDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 492W5NPSAE;
 				INFOPLIST_FILE = SwiftIOSDemo/Info.plist;
@@ -601,6 +633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyy.SwiftIOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -611,6 +644,7 @@
 			baseConfigurationReference = F310A851F1B63AD48A15C3CD /* Pods-SwiftIOSDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 492W5NPSAE;
 				INFOPLIST_FILE = SwiftIOSDemo/Info.plist;
