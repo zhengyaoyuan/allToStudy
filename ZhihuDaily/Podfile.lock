@@ -1,0 +1,66 @@
+PODS:
+  - Action (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - Alamofire (4.7.2)
+  - Differentiator (3.0.2)
+  - MBProgressHUD (1.1.0)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - Nuke (6.1.1)
+  - ObjectMapper (3.1.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - Result (3.2.4)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SnapKit (4.0.0)
+  - SwiftDate (4.5.1)
+  - SwiftyAttributes (4.1.1)
+
+DEPENDENCIES:
+  - Action
+  - Alamofire
+  - MBProgressHUD
+  - Moya/RxSwift
+  - Nuke
+  - ObjectMapper
+  - R.swift
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - SnapKit
+  - SwiftDate
+  - SwiftyAttributes
+
+SPEC CHECKSUMS:
+  Action: d60087ebce41b969d1afdad01e2fa1372a82f26e
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Nuke: bf5d58b2d95ff15cb170c231fe6002d706be77e1
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftyAttributes: 1addf69f31e5779510ac110f8afaea9fcd6d8134
+
+PODFILE CHECKSUM: c520809e828a7a55ea5aaa20de39df3e37276b08
+
+COCOAPODS: 1.4.0

@@ -14,21 +14,25 @@ class SimpleTableViewExampleSectionedViewController
     : ViewController
     , UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-
+    
     let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Double>>(
         configureCell: { (_, tv, indexPath, element) in
             let cell = tv.dequeueReusableCell(withIdentifier: "Cell")!
             cell.textLabel?.text = "\(element) @ row \(indexPath.row)"
             return cell
-        },
+    }/*,
         titleForHeaderInSection: { dataSource, sectionIndex in
             return dataSource[sectionIndex].model
-        }
+    },
+        titleForFooterInSection: { dataSource, sectionIndex in
+            return "Footer"
+    }*/
     )
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         let dataSource = self.dataSource
 
         // 创建 Observable 其元素为 好几个SectionModel
@@ -76,6 +80,6 @@ class SimpleTableViewExampleSectionedViewController
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 0
     }
 }

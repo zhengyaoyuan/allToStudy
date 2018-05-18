@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53A8A77D207F4AEF009083E9 /* NSObject+Zyy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A8A77C207F4AEF009083E9 /* NSObject+Zyy.m */; };
 		53AC8A0F207B6171006512DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC8A0E207B6171006512DC /* AppDelegate.m */; };
 		53AC8A12207B6171006512DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53AC8A11207B6171006512DC /* ViewController.m */; };
 		53AC8A15207B6171006512DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AC8A13207B6171006512DC /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53A8A77B207F4AEF009083E9 /* NSObject+Zyy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Zyy.h"; sourceTree = "<group>"; };
+		53A8A77C207F4AEF009083E9 /* NSObject+Zyy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Zyy.m"; sourceTree = "<group>"; };
 		53AC8A0A207B6171006512DC /* ZYYRuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYYRuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53AC8A0D207B6171006512DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53AC8A0E207B6171006512DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				53AF6DEA207CAEB90055D066 /* MyClass+Category1.m */,
 				53AF6DEC207CAEC40055D066 /* MyClass+Category2.h */,
 				53AF6DED207CAEC40055D066 /* MyClass+Category2.m */,
+				53A8A77B207F4AEF009083E9 /* NSObject+Zyy.h */,
+				53A8A77C207F4AEF009083E9 /* NSObject+Zyy.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				53AF6DEB207CAEB90055D066 /* MyClass+Category1.m in Sources */,
 				53AF6DEE207CAEC40055D066 /* MyClass+Category2.m in Sources */,
 				53AC8A12207B6171006512DC /* ViewController.m in Sources */,
+				53A8A77D207F4AEF009083E9 /* NSObject+Zyy.m in Sources */,
 				53AC8A1D207B6173006512DC /* main.m in Sources */,
 				53AC8A0F207B6171006512DC /* AppDelegate.m in Sources */,
 			);

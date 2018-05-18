@@ -26,6 +26,8 @@
 		39ABD72412F0B61800D1054C /* objc-weak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39ABD72012F0B61800D1054C /* objc-weak.mm */; };
 		39ABD72512F0B61800D1054C /* objc-weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 39ABD71F12F0B61800D1054C /* objc-weak.h */; };
 		39ABD72612F0B61800D1054C /* objc-weak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39ABD72012F0B61800D1054C /* objc-weak.mm */; };
+		5302F959207E014E001159A7 /* XXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5302F958207E014E001159A7 /* XXObject.m */; };
+		5302F95C207E015B001159A7 /* YYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5302F95B207E015B001159A7 /* YYObject.m */; };
 		830F2A740D737FB800392440 /* objc-msg-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 830F2A690D737FB800392440 /* objc-msg-arm.s */; };
 		830F2A750D737FB900392440 /* objc-msg-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 830F2A6A0D737FB800392440 /* objc-msg-i386.s */; };
 		830F2A7D0D737FBB00392440 /* objc-msg-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 830F2A720D737FB800392440 /* objc-msg-x86_64.s */; };
@@ -252,6 +254,10 @@
 		513A037619B4B13100448729 /* cpu_capabilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpu_capabilities.h; sourceTree = "<group>"; };
 		513A037719B4B13100448729 /* pthread_machdep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pthread_machdep.h; sourceTree = "<group>"; };
 		513A037819B4B13100448729 /* vproc_priv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vproc_priv.h; sourceTree = "<group>"; };
+		5302F957207E014E001159A7 /* XXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXObject.h; sourceTree = "<group>"; };
+		5302F958207E014E001159A7 /* XXObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXObject.m; sourceTree = "<group>"; };
+		5302F95A207E015B001159A7 /* YYObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYObject.h; sourceTree = "<group>"; };
+		5302F95B207E015B001159A7 /* YYObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYObject.m; sourceTree = "<group>"; };
 		830F2A690D737FB800392440 /* objc-msg-arm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "objc-msg-arm.s"; path = "runtime/Messengers.subproj/objc-msg-arm.s"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
 		830F2A6A0D737FB800392440 /* objc-msg-i386.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "objc-msg-i386.s"; path = "runtime/Messengers.subproj/objc-msg-i386.s"; sourceTree = "<group>"; };
 		830F2A720D737FB800392440 /* objc-msg-x86_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "objc-msg-x86_64.s"; path = "runtime/Messengers.subproj/objc-msg-x86_64.s"; sourceTree = "<group>"; tabWidth = 8; usesTabs = 1; };
@@ -449,6 +455,10 @@
 			isa = PBXGroup;
 			children = (
 				305B27551C7D9E96005AC125 /* main.m */,
+				5302F957207E014E001159A7 /* XXObject.h */,
+				5302F958207E014E001159A7 /* XXObject.m */,
+				5302F95A207E015B001159A7 /* YYObject.h */,
+				5302F95B207E015B001159A7 /* YYObject.m */,
 			);
 			path = "debug-objc";
 			sourceTree = "<group>";
@@ -883,6 +893,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5302F95C207E015B001159A7 /* YYObject.m in Sources */,
+				5302F959207E014E001159A7 /* XXObject.m in Sources */,
 				305B27561C7D9E96005AC125 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,6 @@
 //  Copyright © 2018年 郑尧元. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
 import ObjectMapper
@@ -19,12 +18,11 @@ enum RequestResult {
     case failed(message: String)
 }
 
-class ZYYMainViewModel {
-
-    let disposeBag = DisposeBag()
+class ZYYMainViewModel: BaseViewModel {
 
     fileprivate let responseModels: Driver<RequestResult>
     
+    let router: Driver<Router>
     
     
     let stories: Driver<[ZYYNormalStoryModel]>
@@ -59,13 +57,17 @@ class ZYYMainViewModel {
 //        }
 //    }
 
-    init(refreshTap: Signal<Void>) {
+    init(refreshTap: Signal<Void>, jumpTap: Signal<Void>) {
         // 点击按钮 触发
+        
+//        responseModels = refreshTap.startWith(<#T##element: ()##()#>)
         responseModels = refreshTap.flatMapLatest { _  in
             return provider.rx
                 .request(MultiTarget(ZYYApiManager.getLatestStories))
+                
 //                return ZYYApiManagerProvider.rx.request(.getLatestStories)
-                .filterSuccessfulStatusCodes()
+                
+//                .filterSuccessfulStatusCodes()
                 // mapJSON 会发出 single 信号 是 Observable 的变种
                 .mapJSON()
                 .asObservable()
@@ -88,6 +90,12 @@ class ZYYMainViewModel {
             
             return []
         }
+        
+        // 讲道理，根据不同字段，跳转不同的界面
+        router = jumpTap.map {
+            return Router.Push(.DemoPage1)
+        }
+        .asDriver(onErrorJustReturn: Router.Present(.DemoPage1))
     }
 }
 

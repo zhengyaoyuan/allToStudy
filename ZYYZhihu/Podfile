@@ -12,4 +12,8 @@ pod 'SwiftyAttributes'
 pod 'SwiftDate', '~> 4.5.0'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxDataSources'
+pod 'MBProgressHUD'
+
+pod 'Spine'
 end

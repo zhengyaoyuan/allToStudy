@@ -38,7 +38,7 @@ example("debug") {
     }
     
     sequenceThatErrors
-        .retry(3)
+        .retry(6)
         .debug()
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)

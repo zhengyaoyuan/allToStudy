@@ -62,3 +62,19 @@ extension ZYYApiManager: TargetType {
         return false
     }
 }
+
+// 想要加的扩展
+//extension Reactive where Base: MoyaProviderType {
+//    func customRequest(_ token: Base.Target, callbackQueue: DispatchQueue? = nil) -> Single<CustomRequestResult> {
+//        return request(token, callbackQueue: callbackQueue)
+//            .mapJSON()
+//            .map{ response -> CustomRequestResult in
+//
+//            }
+//    }
+//}
+//
+//enum CustomRequestResult {
+//    case ok(data: Any)
+//    case failed(error: Error)
+//}

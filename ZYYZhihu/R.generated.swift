@@ -18,14 +18,14 @@ struct R: Rswift.Validatable {
   
   /// This `R.color` struct is generated, and contains static references to 1 colors.
   struct color {
-    /// Color `mainColor`.
-    static let mainColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "mainColor")
+    /// Color `main`.
+    static let main = Rswift.ColorResource(bundle: R.hostingBundle, name: "main")
     
-    /// `UIColor(named: "mainColor", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "main", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func mainColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.mainColor, compatibleWith: traitCollection)
+    static func main(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.main, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -46,8 +46,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `MainViewCell`.
+    static let mainViewCell = _R.nib._MainViewCell()
+    /// Nib `MainViewController`.
+    static let mainViewController = _R.nib._MainViewController()
+    
+    /// `UINib(name: "MainViewCell", in: bundle)`
+    static func mainViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainViewCell)
+    }
+    
+    /// `UINib(name: "MainViewController", in: bundle)`
+    static func mainViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.mainViewController)
+    }
+    
     fileprivate init() {}
   }
   
@@ -104,6 +119,28 @@ struct R: Rswift.Validatable {
 
 struct _R {
   struct nib {
+    struct _MainViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MainViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MainViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MainViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "MainViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

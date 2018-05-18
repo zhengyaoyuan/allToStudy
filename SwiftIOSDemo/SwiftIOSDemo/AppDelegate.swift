@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        #if FREE_VERSION
+            print("免费版")
+        #else
+            print("收费版")
+        #endif
         // Override point for customization after application launch.
         return true
     }

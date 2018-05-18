@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/bang/!svn/ver/504/iphone/trunk/OpenSDK/cpp_encode
+END
+encode.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/bang/!svn/ver/504/iphone/trunk/OpenSDK/cpp_encode/encode.h
+END
+md32_common.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/md32_common.h
+END
+md5_locl.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/md5_locl.h
+END
+encode.mm
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/encode.mm
+END
+md5_dgst.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/md5_dgst.c
+END
+md5_one.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/md5_one.c
+END
+md5.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/bang/!svn/ver/22/iphone/trunk/OpenSDK/cpp_encode/md5.h
+END

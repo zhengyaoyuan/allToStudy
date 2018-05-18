@@ -1,0 +1,36 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'ZhihuDaily' do
+    
+# Network
+# pod 'Alamofire', '~> 4.6.0'
+pod 'Alamofire'
+pod 'Moya/RxSwift'
+
+# Model 
+pod 'ObjectMapper'
+
+# Image Downloader
+pod 'Nuke'
+
+# Autolayout
+pod 'SnapKit'
+
+# Asset
+pod 'R.swift'
+
+pod 'SwiftyAttributes'
+
+# Date
+pod 'SwiftDate'
+
+# RxSwift Series
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'RxDataSources'
+pod 'Action'
+
+# UI
+pod 'MBProgressHUD'
+end

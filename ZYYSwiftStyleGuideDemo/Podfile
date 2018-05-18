@@ -1,0 +1,6 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'ZYYSwiftStyleGuideDemo' do
+pod 'SwiftLint', '~> 0.25.1'
+end

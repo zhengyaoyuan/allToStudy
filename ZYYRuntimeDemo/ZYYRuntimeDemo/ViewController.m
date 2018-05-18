@@ -74,8 +74,15 @@
     
 //    [self judgeClass];
     
-    [self howToFindSourceClassMethod];
-    
+//    [self howToFindSourceClassMethod];
+    [self messageForward];
+}
+
+- (void)messageForward {
+    MyClass *a = [[MyClass alloc] init];
+    [a performSelector:@selector(missMethod)];
+    [a performSelector:@selector(missMethod1)];
+    [a performSelector:@selector(missMethod2)];
 }
 
 // 有 category 时，如何找到初始的类的实例方法

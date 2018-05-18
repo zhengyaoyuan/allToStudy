@@ -43,7 +43,7 @@ class HTTPRequestHomeBannerListParam: HTTPRequestParam {
         self.userId = userId
     }
     
-    // 派生必须写的方法
+    // 派生必须写的方法，要加的东西太多了，用反射可能是更好的方法
     enum Key: String, CodingKey {
         case moduleId
     }

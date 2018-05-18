@@ -10,12 +10,13 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ZYYMainViewController: UIViewController {
+class ZYYMainViewController: BaseViewController {
 
     @IBOutlet weak var refreshBtn: UIBarButtonItem!
+    @IBOutlet weak var jumpBtn: UIBarButtonItem!
     
     @IBOutlet weak var tableView: UITableView!
-    let disposeBag = DisposeBag()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,9 @@ class ZYYMainViewController: UIViewController {
 //        let subject = PublishSubject<String>()
 //        let viewModel = ZYYMainViewModel.init(o: subject.asDriver())
 //        subject.onNext("Void")
-        
+//        refreshBtn.rx.tap.asSignal().startWith(Void)
         // 由 UI 驱动
-        let viewModel = ZYYMainViewModel(refreshTap: refreshBtn.rx.tap.asSignal())
+        let viewModel = ZYYMainViewModel(refreshTap: refreshBtn.rx.tap.asSignal(), jumpTap: jumpBtn.rx.tap.asSignal())
         
         // 要绑定到 cell 上
         viewModel.stories
@@ -35,6 +36,16 @@ class ZYYMainViewController: UIViewController {
             cell.configCell(With: element)
         }
             .disposed(by: disposeBag)
+        
+        // 路由
+        viewModel.router
+            .drive(onNext: { [unowned self] router in
+            router.go(from: self)
+        })
+            .disposed(by: disposeBag)
+        // 有个疑问，vc 与 vc 之间，怎么交流比较好呢？？？
+        
+        // 临时代码 要删的
         
     }
 
